@@ -66,7 +66,7 @@ df.head()
 
 
 
-  <div id="df-e41654ec-958a-4074-8225-e877796de6d1" class="colab-df-container">
+  <div id="df-8e4efda8-e898-4518-b725-c6178520a03b" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -181,7 +181,7 @@ df.head()
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-e41654ec-958a-4074-8225-e877796de6d1')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-8e4efda8-e898-4518-b725-c6178520a03b')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -233,12 +233,12 @@ df.head()
 
     <script>
       const buttonEl =
-        document.querySelector('#df-e41654ec-958a-4074-8225-e877796de6d1 button.colab-df-convert');
+        document.querySelector('#df-8e4efda8-e898-4518-b725-c6178520a03b button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-e41654ec-958a-4074-8225-e877796de6d1');
+        const element = document.querySelector('#df-8e4efda8-e898-4518-b725-c6178520a03b');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -258,8 +258,8 @@ df.head()
   </div>
 
 
-<div id="df-9c46a37d-f6fd-4597-8e79-4ef992b336f0">
-  <button class="colab-df-quickchart" onclick="quickchart('df-9c46a37d-f6fd-4597-8e79-4ef992b336f0')"
+<div id="df-9ae7659e-cd5f-4449-8e02-8028aca63879">
+  <button class="colab-df-quickchart" onclick="quickchart('df-9ae7659e-cd5f-4449-8e02-8028aca63879')"
             title="Suggest charts"
             style="display:none;">
 
@@ -378,7 +378,7 @@ df.head()
     }
     (() => {
       let quickchartButtonEl =
-        document.querySelector('#df-9c46a37d-f6fd-4597-8e79-4ef992b336f0 button');
+        document.querySelector('#df-9ae7659e-cd5f-4449-8e02-8028aca63879 button');
       quickchartButtonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
     })();
@@ -399,7 +399,7 @@ df.describe()
 
 
 
-  <div id="df-e3bba27f-1a7c-4311-ab23-dc4b368cdcae" class="colab-df-container">
+  <div id="df-265eef9f-f767-4e7e-a587-2cf58e82239a" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -550,7 +550,7 @@ df.describe()
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-e3bba27f-1a7c-4311-ab23-dc4b368cdcae')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-265eef9f-f767-4e7e-a587-2cf58e82239a')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -602,12 +602,12 @@ df.describe()
 
     <script>
       const buttonEl =
-        document.querySelector('#df-e3bba27f-1a7c-4311-ab23-dc4b368cdcae button.colab-df-convert');
+        document.querySelector('#df-265eef9f-f767-4e7e-a587-2cf58e82239a button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-e3bba27f-1a7c-4311-ab23-dc4b368cdcae');
+        const element = document.querySelector('#df-265eef9f-f767-4e7e-a587-2cf58e82239a');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -627,8 +627,8 @@ df.describe()
   </div>
 
 
-<div id="df-6c8d31e1-933f-4e20-a321-aba789a23f3c">
-  <button class="colab-df-quickchart" onclick="quickchart('df-6c8d31e1-933f-4e20-a321-aba789a23f3c')"
+<div id="df-38396880-8269-4924-9449-71a76fb0c6dc">
+  <button class="colab-df-quickchart" onclick="quickchart('df-38396880-8269-4924-9449-71a76fb0c6dc')"
             title="Suggest charts"
             style="display:none;">
 
@@ -747,7 +747,7 @@ df.describe()
     }
     (() => {
       let quickchartButtonEl =
-        document.querySelector('#df-6c8d31e1-933f-4e20-a321-aba789a23f3c button');
+        document.querySelector('#df-38396880-8269-4924-9449-71a76fb0c6dc button');
       quickchartButtonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
     })();
@@ -844,7 +844,7 @@ plt.show()
 
 
 ```python
-from sklearn.metrics import confusion_matrix, roc_curve, auc, precision_recall_curve, average_precision_score
+from sklearn.metrics import confusion_matrix, roc_curve, auc, precision_recall_curve, average_precision_score, mean_squared_error
 from sklearn.preprocessing import label_binarize
 from itertools import cycle
 
@@ -868,11 +868,16 @@ def calcule_metrics_classification(y_test, y_pred):
   f1 = f1_score(y_test, y_pred)
   roc_auc = roc_auc_score(y_test, y_pred)
 
+  mse = mean_squared_error(y_test, y_pred)
+  rmse = np.sqrt(mse)
+
   print(f"Accuracy: {accuracy}")
   print(f"Precision: {precision}")
   print(f"Recall: {recall}")
   print(f"F1-score: {f1}")
   print(f"ROC AUC: {roc_auc}")
+  print(f"MSE: {mse}")
+  print(f"RMSE: {rmse}")
 ```
 
 
@@ -968,8 +973,10 @@ def train_and_metrics(model, X_train, y_train, X_test, y_test):
   print('\n--------Métricas gerais (média) para a predição dos 5 folders--------:')
   calcule_metrics_classification(all_true_labels, all_predictions)
 
-  predictions = rf_model.predict(X_test)
+  predictions = best_model.predict(X_test)
   generate_matriz_confusion(y_test, predictions)
+  print('\n--------Cálculo das métricas do melhor modelo--------:')
+  calcule_metrics_classification(y_test, predictions)
   print()
 
   plot_auc_ap(y_test, predictions)
@@ -1087,9 +1094,11 @@ plt.show()
     
 
 
+> Queremos construir um modelo que faça a predição se em determinado dia serão alugadas mais de 50% da média de bicicletas: 287 bicicletas
+
 
 ```python
-limiar = 150
+limiar = 287
 df['demand_class'] = (df['count'] > limiar).astype(int)
 
 columns_classification = ['season', 'holiday', 'workingday', 'weather', 'temp', 'atemp', 'humidity', 'windspeed', 'month', 'day', 'hour', 'registered', 'casual']
@@ -1110,8 +1119,8 @@ y.value_counts()
 
 
 
-    0    5571
-    1    5315
+    0    8226
+    1    2660
     Name: demand_class, dtype: int64
 
 
@@ -1169,96 +1178,107 @@ best_rf_model = train_and_metrics(rf_model, X_train, y_train, X_test, y_test)
 
 
     
-![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_33_1.png)
+![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_34_1.png)
     
 
 
-    Accuracy: 0.9938775510204082
-    Precision: 0.9944873208379272
-    Recall: 0.9922992299229924
-    F1-score: 0.9933920704845816
-    ROC AUC: 0.9937709279967006
+    Accuracy: 0.9954081632653061
+    Precision: 0.9883720930232558
+    Recall: 0.9906759906759907
+    F1-score: 0.9895227008149011
+    ROC AUC: 0.9937050756776425
     
     Matriz de confusão para o folder 1
     
 
 
     
-![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_33_3.png)
+![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_34_3.png)
     
 
 
-    Accuracy: 0.9908163265306122
-    Precision: 0.9905163329820864
-    Recall: 0.9905163329820864
-    F1-score: 0.9905163329820864
-    ROC AUC: 0.9908071279153755
+    Accuracy: 0.9928571428571429
+    Precision: 0.9935483870967742
+    Recall: 0.9767441860465116
+    F1-score: 0.9850746268656716
+    ROC AUC: 0.9873633505888241
     
     Matriz de confusão para o folder 2
     
 
 
     
-![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_33_5.png)
+![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_34_5.png)
     
 
 
-    Accuracy: 0.9964267483409903
-    Precision: 0.9966480446927374
-    Recall: 0.9955357142857143
-    F1-score: 0.9960915689558906
-    ROC AUC: 0.9963567564843436
+    Accuracy: 0.9933639612046963
+    Precision: 0.9907621247113164
+    Recall: 0.9794520547945206
+    F1-score: 0.9850746268656716
+    ROC AUC: 0.9884111030054128
     
     Matriz de confusão para o folder 3
     
 
 
     
-![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_33_7.png)
+![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_34_7.png)
     
 
 
-    Accuracy: 0.9948953547728433
-    Precision: 0.9948132780082988
-    Recall: 0.9948132780082988
-    F1-score: 0.9948132780082988
-    ROC AUC: 0.9948940761900791
+    Accuracy: 0.9928534966819806
+    Precision: 0.9815195071868583
+    Recall: 0.989648033126294
+    F1-score: 0.9855670103092783
+    ROC AUC: 0.9917752360753421
     
     Matriz de confusão para o folder 4
     
 
 
     
-![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_33_9.png)
+![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_34_9.png)
     
 
 
-    Accuracy: 0.9943848902501277
-    Precision: 0.9915700737618546
-    Recall: 0.996822033898305
-    F1-score: 0.99418911780243
-    ROC AUC: 0.9944701302496451
+    Accuracy: 0.9913221031138336
+    Precision: 0.98125
+    Recall: 0.9832985386221295
+    F1-score: 0.9822732012513035
+    ROC AUC: 0.9886087287705243
     
     --------Métricas gerais (média) para a predição dos 5 folders--------:
-    Accuracy: 0.9940798203531693
-    Precision: 0.9935677530017153
-    Recall: 0.993993993993994
-    F1-score: 0.9937808277932663
-    ROC AUC: 0.994075867493589
+    Accuracy: 0.9931611717872818
+    Precision: 0.9869281045751634
+    Recall: 0.9839270199826238
+    F1-score: 0.9854252773547966
+    ROC AUC: 0.9899621757684965
+    MSE: 0.006838828212718179
+    RMSE: 0.08269720801041701
     
 
 
     
-![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_33_11.png)
+![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_34_11.png)
     
 
 
     
+    --------Cálculo das métricas do melhor modelo--------:
+    Accuracy: 0.9972451790633609
+    Precision: 0.9893617021276596
+    Recall: 1.0
+    F1-score: 0.9946524064171123
+    ROC AUC: 0.9981481481481482
+    MSE: 0.0027548209366391185
+    RMSE: 0.0524863881081478
+    
     
 
 
     
-![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_33_13.png)
+![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_34_13.png)
     
 
 
@@ -1281,7 +1301,7 @@ best_svc_model = train_and_metrics(svc_model, X_train, y_train, X_test, y_test)
 
 
     
-![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_35_1.png)
+![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_36_1.png)
     
 
 
@@ -1296,7 +1316,7 @@ best_svc_model = train_and_metrics(svc_model, X_train, y_train, X_test, y_test)
 
 
     
-![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_35_3.png)
+![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_36_3.png)
     
 
 
@@ -1311,66 +1331,77 @@ best_svc_model = train_and_metrics(svc_model, X_train, y_train, X_test, y_test)
 
 
     
-![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_35_5.png)
+![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_36_5.png)
     
 
 
-    Accuracy: 1.0
+    Accuracy: 0.9994895354772844
     Precision: 1.0
-    Recall: 1.0
-    F1-score: 1.0
-    ROC AUC: 1.0
+    Recall: 0.997716894977169
+    F1-score: 0.9988571428571429
+    ROC AUC: 0.9988584474885844
     
     Matriz de confusão para o folder 3
     
 
 
     
-![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_35_7.png)
+![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_36_7.png)
     
 
 
-    Accuracy: 1.0
-    Precision: 1.0
-    Recall: 1.0
-    F1-score: 1.0
-    ROC AUC: 1.0
+    Accuracy: 0.9989790709545686
+    Precision: 0.9979296066252588
+    Recall: 0.9979296066252588
+    F1-score: 0.9979296066252588
+    ROC AUC: 0.9986260499250955
     
     Matriz de confusão para o folder 4
     
 
 
     
-![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_35_9.png)
+![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_36_9.png)
     
 
 
-    Accuracy: 1.0
-    Precision: 1.0
+    Accuracy: 0.9989790709545686
+    Precision: 0.9958419958419958
     Recall: 1.0
-    F1-score: 1.0
-    ROC AUC: 1.0
+    F1-score: 0.9979166666666666
+    ROC AUC: 0.9993243243243244
     
     --------Métricas gerais (média) para a predição dos 5 folders--------:
+    Accuracy: 0.999489639685618
+    Precision: 0.998697351280938
+    Recall: 0.9991311902693311
+    F1-score: 0.998914223669924
+    ROC AUC: 0.9993654617123839
+    MSE: 0.0005103603143819537
+    RMSE: 0.022591155667250708
+    
+
+
+    
+![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_36_11.png)
+    
+
+
+    
+    --------Cálculo das métricas do melhor modelo--------:
     Accuracy: 1.0
     Precision: 1.0
     Recall: 1.0
     F1-score: 1.0
     ROC AUC: 1.0
-    
-
-
-    
-![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_35_11.png)
-    
-
-
+    MSE: 0.0
+    RMSE: 0.0
     
     
 
 
     
-![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_35_13.png)
+![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_36_13.png)
     
 
 
@@ -1412,96 +1443,107 @@ best_bayes_model = train_and_metrics(bayes_model, X_train, y_train, X_test, y_te
 
 
     
-![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_40_1.png)
+![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_41_1.png)
     
 
 
-    Accuracy: 0.938265306122449
-    Precision: 0.9012219959266803
-    Recall: 0.9735973597359736
-    F1-score: 0.9360126916975144
-    ROC AUC: 0.9406521527509555
+    Accuracy: 0.8862244897959184
+    Precision: 0.6579754601226994
+    Recall: 1.0
+    F1-score: 0.793709528214616
+    ROC AUC: 0.9271717831482691
     
     Matriz de confusão para o folder 1
     
 
 
     
-![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_40_3.png)
+![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_41_3.png)
     
 
 
-    Accuracy: 0.9448979591836735
-    Precision: 0.9151036525172754
-    Recall: 0.9768177028451
-    F1-score: 0.944954128440367
-    ROC AUC: 0.9458767050328368
+    Accuracy: 0.8918367346938776
+    Precision: 0.6910688140556369
+    Recall: 0.9978858350951374
+    F1-score: 0.8166089965397924
+    ROC AUC: 0.9279946996592029
     
     Matriz de confusão para o folder 2
     
 
 
     
-![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_40_5.png)
+![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_41_5.png)
     
 
 
-    Accuracy: 0.9530372639101582
-    Precision: 0.9161490683229814
-    Recall: 0.9877232142857143
-    F1-score: 0.9505907626208377
-    ROC AUC: 0.9557618893629889
+    Accuracy: 0.8933129147524247
+    Precision: 0.6769706336939721
+    Recall: 1.0
+    F1-score: 0.8073732718894009
+    ROC AUC: 0.9312952005259698
     
     Matriz de confusão para o folder 3
     
 
 
     
-![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_40_7.png)
+![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_41_7.png)
     
 
 
-    Accuracy: 0.9469116896375702
-    Precision: 0.9240631163708086
-    Recall: 0.9719917012448133
-    F1-score: 0.9474216380182002
-    ROC AUC: 0.9473023832857232
+    Accuracy: 0.8871873404798366
+    Precision: 0.6871428571428572
+    Recall: 0.9958592132505176
+    F1-score: 0.8131868131868132
+    ROC AUC: 0.92374261475534
     
     Matriz de confusão para o folder 4
     
 
 
     
-![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_40_9.png)
+![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_41_9.png)
     
 
 
-    Accuracy: 0.9428279734558448
-    Precision: 0.9126984126984127
-    Recall: 0.9745762711864406
-    F1-score: 0.9426229508196721
-    ROC AUC: 0.9439383818986391
+    Accuracy: 0.8836140888208269
+    Precision: 0.6790299572039943
+    Recall: 0.9937369519832986
+    F1-score: 0.8067796610169492
+    ROC AUC: 0.9208549624781358
     
     --------Métricas gerais (média) para a predição dos 5 folders--------:
-    Accuracy: 0.9451873022353782
-    Precision: 0.9139072847682119
-    Recall: 0.9768339768339769
-    F1-score: 0.9443234836702956
-    ROC AUC: 0.9466448365182543
+    Accuracy: 0.8884352352761049
+    Precision: 0.6786875554241797
+    Recall: 0.9973935708079931
+    F1-score: 0.8077396657871593
+    ROC AUC: 0.9261817753973254
+    MSE: 0.11156476472389507
+    RMSE: 0.334013120586445
     
 
 
     
-![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_40_11.png)
+![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_41_11.png)
     
 
 
     
+    --------Cálculo das métricas do melhor modelo--------:
+    Accuracy: 0.8962350780532599
+    Precision: 0.7139175257731959
+    Recall: 0.992831541218638
+    F1-score: 0.830584707646177
+    ROC AUC: 0.9278972520908005
+    MSE: 0.10376492194674013
+    RMSE: 0.32212563068892874
+    
     
 
 
     
-![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_40_13.png)
+![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_41_13.png)
     
 
 
@@ -1537,7 +1579,7 @@ y_train
     10735    1
     6186     0
     10841    0
-    613      1
+    613      0
     Name: demand_class, Length: 9797, dtype: int64
 
 
@@ -1575,7 +1617,7 @@ X_train.shape, y_train.shape
 
 
 
-    ((9797, 13), (9797,))
+    ((9797, 13, 1), (9797,))
 
 
 
@@ -1602,7 +1644,7 @@ def specificity(y_true, y_pred):
     return specificity
 ```
 
-    Requirement already satisfied: tensorflow_addons in /usr/local/lib/python3.10/dist-packages (0.22.0)
+    Requirement already satisfied: tensorflow_addons in /usr/local/lib/python3.10/dist-packages (0.23.0)
     Requirement already satisfied: packaging in /usr/local/lib/python3.10/dist-packages (from tensorflow_addons) (23.2)
     Requirement already satisfied: typeguard<3.0.0,>=2.7 in /usr/local/lib/python3.10/dist-packages (from tensorflow_addons) (2.13.3)
     
@@ -1615,7 +1657,7 @@ X_train.shape
 
 
 
-    (9797, 13)
+    (9797, 13, 1)
 
 
 
@@ -1663,485 +1705,471 @@ for n_folder, (train_index, test_index) in enumerate(cv.split(X_train, y_train))
 ```
 
     Epoch 1/20
-    245/245 [==============================] - ETA: 0s - loss: 0.2841 - mae: 0.2060 - accuracy: 1.0000 - Recall: 0.8786 - Precision: 0.8791 - Specificity: 0.9965 - AUC: 0.9563
+    244/245 [============================>.] - ETA: 0s - loss: 0.2371 - mae: 0.1699 - accuracy: 1.0000 - Recall: 0.6507 - Precision: 0.9204 - Specificity: 0.9981 - AUC: 0.9551
     Epoch 1: val_accuracy improved from -inf to 1.00000, saving model to best_model.h5
-    245/245 [==============================] - 8s 16ms/step - loss: 0.2841 - mae: 0.2060 - accuracy: 1.0000 - Recall: 0.8786 - Precision: 0.8791 - Specificity: 0.9965 - AUC: 0.9563 - val_loss: 0.0953 - val_mae: 0.0755 - val_accuracy: 1.0000 - val_Recall: 0.9885 - val_Precision: 0.9518 - val_Specificity: 1.0000 - val_AUC: 0.9983
+    245/245 [==============================] - 4s 8ms/step - loss: 0.2365 - mae: 0.1695 - accuracy: 1.0000 - Recall: 0.6513 - Precision: 0.9206 - Specificity: 0.9981 - AUC: 0.9552 - val_loss: 0.0691 - val_mae: 0.0540 - val_accuracy: 1.0000 - val_Recall: 0.9161 - val_Precision: 0.9932 - val_Specificity: 1.0000 - val_AUC: 0.9984
     Epoch 2/20
-      8/245 [..............................] - ETA: 1s - loss: 0.1225 - mae: 0.0828 - accuracy: 1.0000 - Recall: 0.9615 - Precision: 0.9091 - Specificity: 1.0000 - AUC: 0.9923
+     36/245 [===>..........................] - ETA: 0s - loss: 0.0696 - mae: 0.0528 - accuracy: 1.0000 - Recall: 0.9386 - Precision: 0.9594 - Specificity: 1.0000 - AUC: 0.9973
 
     /usr/local/lib/python3.10/dist-packages/keras/src/engine/training.py:3079: UserWarning: You are saving your model as an HDF5 file via `model.save()`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')`.
       saving_api.save_model(
     
 
-    242/245 [============================>.] - ETA: 0s - loss: 0.0863 - mae: 0.0621 - accuracy: 1.0000 - Recall: 0.9640 - Precision: 0.9645 - Specificity: 1.0000 - AUC: 0.9962
+    245/245 [==============================] - ETA: 0s - loss: 0.0574 - mae: 0.0430 - accuracy: 1.0000 - Recall: 0.9512 - Precision: 0.9638 - Specificity: 1.0000 - AUC: 0.9980
     Epoch 2: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 5ms/step - loss: 0.0859 - mae: 0.0619 - accuracy: 1.0000 - Recall: 0.9645 - Precision: 0.9650 - Specificity: 1.0000 - AUC: 0.9962 - val_loss: 0.0556 - val_mae: 0.0432 - val_accuracy: 1.0000 - val_Recall: 0.9697 - val_Precision: 0.9968 - val_Specificity: 1.0000 - val_AUC: 0.9993
+    245/245 [==============================] - 2s 8ms/step - loss: 0.0574 - mae: 0.0430 - accuracy: 1.0000 - Recall: 0.9512 - Precision: 0.9638 - Specificity: 1.0000 - AUC: 0.9980 - val_loss: 0.0441 - val_mae: 0.0345 - val_accuracy: 1.0000 - val_Recall: 0.9539 - val_Precision: 0.9764 - val_Specificity: 1.0000 - val_AUC: 0.9992
     Epoch 3/20
-    242/245 [============================>.] - ETA: 0s - loss: 0.0601 - mae: 0.0414 - accuracy: 1.0000 - Recall: 0.9762 - Precision: 0.9770 - Specificity: 1.0000 - AUC: 0.9980
+    244/245 [============================>.] - ETA: 0s - loss: 0.0421 - mae: 0.0302 - accuracy: 1.0000 - Recall: 0.9583 - Precision: 0.9664 - Specificity: 1.0000 - AUC: 0.9987
     Epoch 3: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0606 - mae: 0.0417 - accuracy: 1.0000 - Recall: 0.9765 - Precision: 0.9757 - Specificity: 1.0000 - AUC: 0.9980 - val_loss: 0.0405 - val_mae: 0.0324 - val_accuracy: 1.0000 - val_Recall: 0.9833 - val_Precision: 0.9937 - val_Specificity: 1.0000 - val_AUC: 0.9997
+    245/245 [==============================] - 2s 10ms/step - loss: 0.0425 - mae: 0.0304 - accuracy: 1.0000 - Recall: 0.9585 - Precision: 0.9656 - Specificity: 1.0000 - AUC: 0.9987 - val_loss: 0.0890 - val_mae: 0.0490 - val_accuracy: 1.0000 - val_Recall: 1.0000 - val_Precision: 0.8457 - val_Specificity: 1.0000 - val_AUC: 0.9996
     Epoch 4/20
-    240/245 [============================>.] - ETA: 0s - loss: 0.0427 - mae: 0.0317 - accuracy: 1.0000 - Recall: 0.9832 - Precision: 0.9838 - Specificity: 1.0000 - AUC: 0.9992
+    242/245 [============================>.] - ETA: 0s - loss: 0.0374 - mae: 0.0250 - accuracy: 1.0000 - Recall: 0.9655 - Precision: 0.9717 - Specificity: 1.0000 - AUC: 0.9989
     Epoch 4: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0430 - mae: 0.0318 - accuracy: 1.0000 - Recall: 0.9825 - Precision: 0.9841 - Specificity: 1.0000 - AUC: 0.9991 - val_loss: 0.0312 - val_mae: 0.0248 - val_accuracy: 1.0000 - val_Recall: 0.9906 - val_Precision: 0.9896 - val_Specificity: 1.0000 - val_AUC: 0.9997
+    245/245 [==============================] - 3s 14ms/step - loss: 0.0374 - mae: 0.0250 - accuracy: 1.0000 - Recall: 0.9659 - Precision: 0.9710 - Specificity: 1.0000 - AUC: 0.9989 - val_loss: 0.0645 - val_mae: 0.0375 - val_accuracy: 1.0000 - val_Recall: 1.0000 - val_Precision: 0.8817 - val_Specificity: 1.0000 - val_AUC: 0.9995
     Epoch 5/20
-    237/245 [============================>.] - ETA: 0s - loss: 0.0414 - mae: 0.0287 - accuracy: 1.0000 - Recall: 0.9806 - Precision: 0.9806 - Specificity: 1.0000 - AUC: 0.9990
+    240/245 [============================>.] - ETA: 0s - loss: 0.0454 - mae: 0.0268 - accuracy: 1.0000 - Recall: 0.9576 - Precision: 0.9581 - Specificity: 1.0000 - AUC: 0.9983
     Epoch 5: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0420 - mae: 0.0290 - accuracy: 1.0000 - Recall: 0.9796 - Precision: 0.9807 - Specificity: 1.0000 - AUC: 0.9990 - val_loss: 0.0588 - val_mae: 0.0341 - val_accuracy: 1.0000 - val_Recall: 0.9384 - val_Precision: 1.0000 - val_Specificity: 1.0000 - val_AUC: 0.9997
+    245/245 [==============================] - 3s 12ms/step - loss: 0.0448 - mae: 0.0265 - accuracy: 1.0000 - Recall: 0.9585 - Precision: 0.9590 - Specificity: 1.0000 - AUC: 0.9984 - val_loss: 0.0288 - val_mae: 0.0225 - val_accuracy: 1.0000 - val_Recall: 0.9748 - val_Precision: 0.9894 - val_Specificity: 1.0000 - val_AUC: 0.9996
     Epoch 6/20
-    240/245 [============================>.] - ETA: 0s - loss: 0.0424 - mae: 0.0271 - accuracy: 1.0000 - Recall: 0.9824 - Precision: 0.9790 - Specificity: 1.0000 - AUC: 0.9989
+    244/245 [============================>.] - ETA: 0s - loss: 0.0299 - mae: 0.0204 - accuracy: 1.0000 - Recall: 0.9725 - Precision: 0.9746 - Specificity: 1.0000 - AUC: 0.9991
     Epoch 6: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0421 - mae: 0.0270 - accuracy: 1.0000 - Recall: 0.9825 - Precision: 0.9794 - Specificity: 1.0000 - AUC: 0.9989 - val_loss: 0.0295 - val_mae: 0.0219 - val_accuracy: 1.0000 - val_Recall: 0.9979 - val_Precision: 0.9795 - val_Specificity: 1.0000 - val_AUC: 0.9997
+    245/245 [==============================] - 2s 9ms/step - loss: 0.0308 - mae: 0.0206 - accuracy: 1.0000 - Recall: 0.9716 - Precision: 0.9747 - Specificity: 1.0000 - AUC: 0.9990 - val_loss: 0.0857 - val_mae: 0.0339 - val_accuracy: 1.0000 - val_Recall: 0.8553 - val_Precision: 1.0000 - val_Specificity: 1.0000 - val_AUC: 0.9974
     Epoch 7/20
-    232/245 [===========================>..] - ETA: 0s - loss: 0.0394 - mae: 0.0250 - accuracy: 1.0000 - Recall: 0.9815 - Precision: 0.9796 - Specificity: 1.0000 - AUC: 0.9991
+    241/245 [============================>.] - ETA: 0s - loss: 0.0293 - mae: 0.0198 - accuracy: 1.0000 - Recall: 0.9718 - Precision: 0.9765 - Specificity: 1.0000 - AUC: 0.9993
     Epoch 7: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0392 - mae: 0.0251 - accuracy: 1.0000 - Recall: 0.9815 - Precision: 0.9799 - Specificity: 1.0000 - AUC: 0.9991 - val_loss: 0.0243 - val_mae: 0.0188 - val_accuracy: 1.0000 - val_Recall: 0.9896 - val_Precision: 0.9958 - val_Specificity: 1.0000 - val_AUC: 0.9998
+    245/245 [==============================] - 3s 11ms/step - loss: 0.0290 - mae: 0.0196 - accuracy: 1.0000 - Recall: 0.9722 - Precision: 0.9768 - Specificity: 1.0000 - AUC: 0.9993 - val_loss: 0.0384 - val_mae: 0.0244 - val_accuracy: 1.0000 - val_Recall: 1.0000 - val_Precision: 0.9226 - val_Specificity: 1.0000 - val_AUC: 0.9997
     Epoch 8/20
-    239/245 [============================>.] - ETA: 0s - loss: 0.0327 - mae: 0.0212 - accuracy: 1.0000 - Recall: 0.9859 - Precision: 0.9864 - Specificity: 1.0000 - AUC: 0.9994
+    243/245 [============================>.] - ETA: 0s - loss: 0.0314 - mae: 0.0194 - accuracy: 1.0000 - Recall: 0.9740 - Precision: 0.9730 - Specificity: 1.0000 - AUC: 0.9992
     Epoch 8: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0325 - mae: 0.0211 - accuracy: 1.0000 - Recall: 0.9862 - Precision: 0.9864 - Specificity: 1.0000 - AUC: 0.9994 - val_loss: 0.0261 - val_mae: 0.0185 - val_accuracy: 1.0000 - val_Recall: 0.9823 - val_Precision: 1.0000 - val_Specificity: 1.0000 - val_AUC: 0.9998
+    245/245 [==============================] - 2s 9ms/step - loss: 0.0313 - mae: 0.0194 - accuracy: 1.0000 - Recall: 0.9743 - Precision: 0.9732 - Specificity: 1.0000 - AUC: 0.9992 - val_loss: 0.0306 - val_mae: 0.0195 - val_accuracy: 1.0000 - val_Recall: 0.9455 - val_Precision: 1.0000 - val_Specificity: 1.0000 - val_AUC: 0.9997
     Epoch 9/20
-    236/245 [===========================>..] - ETA: 0s - loss: 0.0278 - mae: 0.0187 - accuracy: 1.0000 - Recall: 0.9875 - Precision: 0.9897 - Specificity: 1.0000 - AUC: 0.9996
+    243/245 [============================>.] - ETA: 0s - loss: 0.0295 - mae: 0.0176 - accuracy: 1.0000 - Recall: 0.9757 - Precision: 0.9798 - Specificity: 1.0000 - AUC: 0.9993
     Epoch 9: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0271 - mae: 0.0183 - accuracy: 1.0000 - Recall: 0.9880 - Precision: 0.9901 - Specificity: 1.0000 - AUC: 0.9996 - val_loss: 0.0263 - val_mae: 0.0188 - val_accuracy: 1.0000 - val_Recall: 0.9781 - val_Precision: 1.0000 - val_Specificity: 1.0000 - val_AUC: 0.9998
+    245/245 [==============================] - 3s 13ms/step - loss: 0.0295 - mae: 0.0176 - accuracy: 1.0000 - Recall: 0.9758 - Precision: 0.9794 - Specificity: 1.0000 - AUC: 0.9993 - val_loss: 0.0324 - val_mae: 0.0213 - val_accuracy: 1.0000 - val_Recall: 1.0000 - val_Precision: 0.9353 - val_Specificity: 1.0000 - val_AUC: 0.9998
     Epoch 10/20
-    240/245 [============================>.] - ETA: 0s - loss: 0.0355 - mae: 0.0207 - accuracy: 1.0000 - Recall: 0.9833 - Precision: 0.9822 - Specificity: 0.9997 - AUC: 0.9991
+    244/245 [============================>.] - ETA: 0s - loss: 0.0223 - mae: 0.0147 - accuracy: 1.0000 - Recall: 0.9789 - Precision: 0.9862 - Specificity: 1.0000 - AUC: 0.9996
     Epoch 10: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0360 - mae: 0.0209 - accuracy: 1.0000 - Recall: 0.9825 - Precision: 0.9825 - Specificity: 0.9998 - AUC: 0.9991 - val_loss: 0.0342 - val_mae: 0.0216 - val_accuracy: 1.0000 - val_Recall: 0.9729 - val_Precision: 0.9957 - val_Specificity: 1.0000 - val_AUC: 0.9996
+    245/245 [==============================] - 4s 15ms/step - loss: 0.0223 - mae: 0.0147 - accuracy: 1.0000 - Recall: 0.9790 - Precision: 0.9862 - Specificity: 1.0000 - AUC: 0.9996 - val_loss: 0.0247 - val_mae: 0.0166 - val_accuracy: 1.0000 - val_Recall: 0.9539 - val_Precision: 0.9978 - val_Specificity: 1.0000 - val_AUC: 0.9999
     Epoch 11/20
-    238/245 [============================>.] - ETA: 0s - loss: 0.0484 - mae: 0.0255 - accuracy: 1.0000 - Recall: 0.9817 - Precision: 0.9781 - Specificity: 0.9995 - AUC: 0.9984
+    245/245 [==============================] - ETA: 0s - loss: 0.0188 - mae: 0.0132 - accuracy: 1.0000 - Recall: 0.9869 - Precision: 0.9889 - Specificity: 1.0000 - AUC: 0.9997
     Epoch 11: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 6ms/step - loss: 0.0487 - mae: 0.0255 - accuracy: 1.0000 - Recall: 0.9809 - Precision: 0.9784 - Specificity: 0.9995 - AUC: 0.9984 - val_loss: 0.0235 - val_mae: 0.0179 - val_accuracy: 1.0000 - val_Recall: 0.9875 - val_Precision: 0.9927 - val_Specificity: 1.0000 - val_AUC: 0.9998
+    245/245 [==============================] - 2s 9ms/step - loss: 0.0188 - mae: 0.0132 - accuracy: 1.0000 - Recall: 0.9869 - Precision: 0.9889 - Specificity: 1.0000 - AUC: 0.9997 - val_loss: 0.0219 - val_mae: 0.0144 - val_accuracy: 1.0000 - val_Recall: 0.9581 - val_Precision: 1.0000 - val_Specificity: 1.0000 - val_AUC: 0.9999
     Epoch 12/20
-    241/245 [============================>.] - ETA: 0s - loss: 0.0278 - mae: 0.0177 - accuracy: 1.0000 - Recall: 0.9875 - Precision: 0.9875 - Specificity: 1.0000 - AUC: 0.9995
+    244/245 [============================>.] - ETA: 0s - loss: 0.0227 - mae: 0.0137 - accuracy: 1.0000 - Recall: 0.9810 - Precision: 0.9831 - Specificity: 1.0000 - AUC: 0.9996
     Epoch 12: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 5ms/step - loss: 0.0282 - mae: 0.0179 - accuracy: 1.0000 - Recall: 0.9877 - Precision: 0.9870 - Specificity: 1.0000 - AUC: 0.9995 - val_loss: 0.0222 - val_mae: 0.0158 - val_accuracy: 1.0000 - val_Recall: 0.9969 - val_Precision: 0.9845 - val_Specificity: 1.0000 - val_AUC: 0.9998
+    245/245 [==============================] - 2s 8ms/step - loss: 0.0226 - mae: 0.0137 - accuracy: 1.0000 - Recall: 0.9811 - Precision: 0.9832 - Specificity: 1.0000 - AUC: 0.9996 - val_loss: 0.0210 - val_mae: 0.0150 - val_accuracy: 1.0000 - val_Recall: 0.9644 - val_Precision: 0.9892 - val_Specificity: 1.0000 - val_AUC: 0.9997
     Epoch 13/20
-    243/245 [============================>.] - ETA: 0s - loss: 0.0350 - mae: 0.0202 - accuracy: 1.0000 - Recall: 0.9850 - Precision: 0.9853 - Specificity: 1.0000 - AUC: 0.9993
+    241/245 [============================>.] - ETA: 0s - loss: 0.0182 - mae: 0.0121 - accuracy: 1.0000 - Recall: 0.9829 - Precision: 0.9871 - Specificity: 1.0000 - AUC: 0.9997
     Epoch 13: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 2s 6ms/step - loss: 0.0352 - mae: 0.0203 - accuracy: 1.0000 - Recall: 0.9851 - Precision: 0.9849 - Specificity: 1.0000 - AUC: 0.9993 - val_loss: 0.0222 - val_mae: 0.0160 - val_accuracy: 1.0000 - val_Recall: 0.9958 - val_Precision: 0.9907 - val_Specificity: 1.0000 - val_AUC: 0.9998
+    245/245 [==============================] - 3s 12ms/step - loss: 0.0181 - mae: 0.0121 - accuracy: 1.0000 - Recall: 0.9832 - Precision: 0.9868 - Specificity: 1.0000 - AUC: 0.9997 - val_loss: 0.0194 - val_mae: 0.0134 - val_accuracy: 1.0000 - val_Recall: 0.9748 - val_Precision: 0.9894 - val_Specificity: 1.0000 - val_AUC: 0.9997
     Epoch 14/20
-    240/245 [============================>.] - ETA: 0s - loss: 0.0276 - mae: 0.0176 - accuracy: 1.0000 - Recall: 0.9878 - Precision: 0.9883 - Specificity: 1.0000 - AUC: 0.9996
+    242/245 [============================>.] - ETA: 0s - loss: 0.0320 - mae: 0.0155 - accuracy: 1.0000 - Recall: 0.9766 - Precision: 0.9761 - Specificity: 0.9997 - AUC: 0.9984
     Epoch 14: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 5ms/step - loss: 0.0276 - mae: 0.0176 - accuracy: 1.0000 - Recall: 0.9880 - Precision: 0.9877 - Specificity: 1.0000 - AUC: 0.9995 - val_loss: 0.0169 - val_mae: 0.0135 - val_accuracy: 1.0000 - val_Recall: 0.9958 - val_Precision: 0.9927 - val_Specificity: 1.0000 - val_AUC: 0.9999
+    245/245 [==============================] - 3s 11ms/step - loss: 0.0324 - mae: 0.0156 - accuracy: 1.0000 - Recall: 0.9758 - Precision: 0.9764 - Specificity: 0.9997 - AUC: 0.9984 - val_loss: 0.0453 - val_mae: 0.0214 - val_accuracy: 1.0000 - val_Recall: 0.9266 - val_Precision: 0.9955 - val_Specificity: 1.0000 - val_AUC: 0.9994
     Epoch 15/20
-    236/245 [===========================>..] - ETA: 0s - loss: 0.0262 - mae: 0.0159 - accuracy: 1.0000 - Recall: 0.9886 - Precision: 0.9900 - Specificity: 1.0000 - AUC: 0.9996
+    244/245 [============================>.] - ETA: 0s - loss: 0.0217 - mae: 0.0143 - accuracy: 1.0000 - Recall: 0.9805 - Precision: 0.9825 - Specificity: 1.0000 - AUC: 0.9996
     Epoch 15: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 2s 6ms/step - loss: 0.0259 - mae: 0.0158 - accuracy: 1.0000 - Recall: 0.9885 - Precision: 0.9901 - Specificity: 1.0000 - AUC: 0.9996 - val_loss: 0.0228 - val_mae: 0.0157 - val_accuracy: 1.0000 - val_Recall: 0.9990 - val_Precision: 0.9785 - val_Specificity: 1.0000 - val_AUC: 0.9999
+    245/245 [==============================] - 5s 19ms/step - loss: 0.0216 - mae: 0.0143 - accuracy: 1.0000 - Recall: 0.9806 - Precision: 0.9826 - Specificity: 1.0000 - AUC: 0.9996 - val_loss: 0.0313 - val_mae: 0.0170 - val_accuracy: 1.0000 - val_Recall: 0.9371 - val_Precision: 1.0000 - val_Specificity: 1.0000 - val_AUC: 0.9998
     Epoch 16/20
-    239/245 [============================>.] - ETA: 0s - loss: 0.0311 - mae: 0.0172 - accuracy: 1.0000 - Recall: 0.9875 - Precision: 0.9875 - Specificity: 0.9997 - AUC: 0.9989
+    237/245 [============================>.] - ETA: 0s - loss: 0.0238 - mae: 0.0139 - accuracy: 1.0000 - Recall: 0.9777 - Precision: 0.9803 - Specificity: 1.0000 - AUC: 0.9995
     Epoch 16: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 2s 8ms/step - loss: 0.0308 - mae: 0.0171 - accuracy: 1.0000 - Recall: 0.9872 - Precision: 0.9877 - Specificity: 0.9998 - AUC: 0.9990 - val_loss: 0.0200 - val_mae: 0.0143 - val_accuracy: 1.0000 - val_Recall: 0.9854 - val_Precision: 0.9989 - val_Specificity: 1.0000 - val_AUC: 0.9999
+    245/245 [==============================] - 1s 6ms/step - loss: 0.0236 - mae: 0.0139 - accuracy: 1.0000 - Recall: 0.9779 - Precision: 0.9810 - Specificity: 1.0000 - AUC: 0.9995 - val_loss: 0.0187 - val_mae: 0.0140 - val_accuracy: 1.0000 - val_Recall: 0.9979 - val_Precision: 0.9754 - val_Specificity: 1.0000 - val_AUC: 0.9999
     Epoch 17/20
-    241/245 [============================>.] - ETA: 0s - loss: 0.0234 - mae: 0.0151 - accuracy: 1.0000 - Recall: 0.9902 - Precision: 0.9894 - Specificity: 1.0000 - AUC: 0.9997
+    235/245 [===========================>..] - ETA: 0s - loss: 0.0255 - mae: 0.0145 - accuracy: 1.0000 - Recall: 0.9749 - Precision: 0.9808 - Specificity: 1.0000 - AUC: 0.9990
     Epoch 17: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 2s 10ms/step - loss: 0.0239 - mae: 0.0153 - accuracy: 1.0000 - Recall: 0.9901 - Precision: 0.9890 - Specificity: 1.0000 - AUC: 0.9997 - val_loss: 0.1373 - val_mae: 0.0448 - val_accuracy: 1.0000 - val_Recall: 0.9081 - val_Precision: 1.0000 - val_Specificity: 1.0000 - val_AUC: 0.9946
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0249 - mae: 0.0143 - accuracy: 1.0000 - Recall: 0.9758 - Precision: 0.9810 - Specificity: 1.0000 - AUC: 0.9990 - val_loss: 0.0283 - val_mae: 0.0167 - val_accuracy: 1.0000 - val_Recall: 0.9686 - val_Precision: 0.9809 - val_Specificity: 1.0000 - val_AUC: 0.9994
     Epoch 18/20
-    230/245 [===========================>..] - ETA: 0s - loss: 0.0496 - mae: 0.0244 - accuracy: 1.0000 - Recall: 0.9791 - Precision: 0.9811 - Specificity: 0.9997 - AUC: 0.9977
+    239/245 [============================>.] - ETA: 0s - loss: 0.0241 - mae: 0.0140 - accuracy: 1.0000 - Recall: 0.9757 - Precision: 0.9832 - Specificity: 1.0000 - AUC: 0.9995
     Epoch 18: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 5ms/step - loss: 0.0476 - mae: 0.0238 - accuracy: 1.0000 - Recall: 0.9802 - Precision: 0.9814 - Specificity: 0.9998 - AUC: 0.9979 - val_loss: 0.0196 - val_mae: 0.0147 - val_accuracy: 1.0000 - val_Recall: 0.9948 - val_Precision: 0.9948 - val_Specificity: 1.0000 - val_AUC: 0.9998
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0238 - mae: 0.0139 - accuracy: 1.0000 - Recall: 0.9764 - Precision: 0.9836 - Specificity: 1.0000 - AUC: 0.9995 - val_loss: 0.0175 - val_mae: 0.0131 - val_accuracy: 1.0000 - val_Recall: 0.9748 - val_Precision: 0.9936 - val_Specificity: 1.0000 - val_AUC: 0.9999
     Epoch 19/20
-    235/245 [===========================>..] - ETA: 0s - loss: 0.0234 - mae: 0.0154 - accuracy: 1.0000 - Recall: 0.9885 - Precision: 0.9899 - Specificity: 1.0000 - AUC: 0.9997
+    236/245 [===========================>..] - ETA: 0s - loss: 0.0209 - mae: 0.0122 - accuracy: 1.0000 - Recall: 0.9832 - Precision: 0.9869 - Specificity: 1.0000 - AUC: 0.9996
     Epoch 19: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0234 - mae: 0.0154 - accuracy: 1.0000 - Recall: 0.9885 - Precision: 0.9898 - Specificity: 1.0000 - AUC: 0.9997 - val_loss: 0.0250 - val_mae: 0.0158 - val_accuracy: 1.0000 - val_Recall: 0.9990 - val_Precision: 0.9755 - val_Specificity: 1.0000 - val_AUC: 0.9999
-    62/62 [==============================] - 0s 2ms/step
-    
-
-
-    
-![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_51_3.png)
-    
-
-
-    Accuracy: 0.9811224489795919
-    Precision: 1.0
-    Recall: 0.9613778705636743
-    F1-score: 0.9803086748270357
-    ROC AUC: 0.9806889352818371
-    Epoch 1/20
-    238/245 [============================>.] - ETA: 0s - loss: 0.2880 - mae: 0.2109 - accuracy: 1.0000 - Recall: 0.8470 - Precision: 0.8971 - Specificity: 0.9951 - AUC: 0.9568
-    Epoch 1: val_accuracy improved from -inf to 1.00000, saving model to best_model.h5
-    245/245 [==============================] - 4s 7ms/step - loss: 0.2827 - mae: 0.2072 - accuracy: 1.0000 - Recall: 0.8499 - Precision: 0.8994 - Specificity: 0.9965 - AUC: 0.9586 - val_loss: 0.1013 - val_mae: 0.0793 - val_accuracy: 1.0000 - val_Recall: 0.9468 - val_Precision: 0.9902 - val_Specificity: 1.0000 - val_AUC: 0.9976
-    Epoch 2/20
-     46/245 [====>.........................] - ETA: 0s - loss: 0.0929 - mae: 0.0734 - accuracy: 1.0000 - Recall: 0.9577 - Precision: 0.9776 - Specificity: 1.0000 - AUC: 0.9974
-
-    /usr/local/lib/python3.10/dist-packages/keras/src/engine/training.py:3079: UserWarning: You are saving your model as an HDF5 file via `model.save()`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')`.
-      saving_api.save_model(
-    
-
-    238/245 [============================>.] - ETA: 0s - loss: 0.0861 - mae: 0.0633 - accuracy: 1.0000 - Recall: 0.9653 - Precision: 0.9656 - Specificity: 1.0000 - AUC: 0.9965
-    Epoch 2: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0854 - mae: 0.0628 - accuracy: 1.0000 - Recall: 0.9663 - Precision: 0.9658 - Specificity: 1.0000 - AUC: 0.9965 - val_loss: 0.0594 - val_mae: 0.0461 - val_accuracy: 1.0000 - val_Recall: 0.9760 - val_Precision: 0.9926 - val_Specificity: 1.0000 - val_AUC: 0.9990
-    Epoch 3/20
-    232/245 [===========================>..] - ETA: 0s - loss: 0.0571 - mae: 0.0420 - accuracy: 1.0000 - Recall: 0.9758 - Precision: 0.9750 - Specificity: 1.0000 - AUC: 0.9984
-    Epoch 3: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0560 - mae: 0.0413 - accuracy: 1.0000 - Recall: 0.9760 - Precision: 0.9755 - Specificity: 1.0000 - AUC: 0.9985 - val_loss: 0.0466 - val_mae: 0.0351 - val_accuracy: 1.0000 - val_Recall: 0.9916 - val_Precision: 0.9714 - val_Specificity: 1.0000 - val_AUC: 0.9993
-    Epoch 4/20
-    234/245 [===========================>..] - ETA: 0s - loss: 0.0568 - mae: 0.0362 - accuracy: 1.0000 - Recall: 0.9751 - Precision: 0.9775 - Specificity: 0.9997 - AUC: 0.9980
-    Epoch 4: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0569 - mae: 0.0363 - accuracy: 1.0000 - Recall: 0.9757 - Precision: 0.9773 - Specificity: 0.9998 - AUC: 0.9980 - val_loss: 0.0393 - val_mae: 0.0304 - val_accuracy: 1.0000 - val_Recall: 0.9739 - val_Precision: 0.9979 - val_Specificity: 1.0000 - val_AUC: 0.9997
-    Epoch 5/20
-    239/245 [============================>.] - ETA: 0s - loss: 0.0437 - mae: 0.0299 - accuracy: 1.0000 - Recall: 0.9826 - Precision: 0.9802 - Specificity: 1.0000 - AUC: 0.9989
-    Epoch 5: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0440 - mae: 0.0300 - accuracy: 1.0000 - Recall: 0.9823 - Precision: 0.9805 - Specificity: 1.0000 - AUC: 0.9989 - val_loss: 0.0418 - val_mae: 0.0288 - val_accuracy: 1.0000 - val_Recall: 0.9958 - val_Precision: 0.9666 - val_Specificity: 1.0000 - val_AUC: 0.9996
-    Epoch 6/20
-    240/245 [============================>.] - ETA: 0s - loss: 0.0367 - mae: 0.0256 - accuracy: 1.0000 - Recall: 0.9842 - Precision: 0.9835 - Specificity: 1.0000 - AUC: 0.9993
-    Epoch 6: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0367 - mae: 0.0257 - accuracy: 1.0000 - Recall: 0.9841 - Precision: 0.9836 - Specificity: 1.0000 - AUC: 0.9993 - val_loss: 0.0310 - val_mae: 0.0229 - val_accuracy: 1.0000 - val_Recall: 0.9749 - val_Precision: 0.9989 - val_Specificity: 1.0000 - val_AUC: 0.9998
-    Epoch 7/20
-    229/245 [===========================>..] - ETA: 0s - loss: 0.0410 - mae: 0.0254 - accuracy: 1.0000 - Recall: 0.9812 - Precision: 0.9826 - Specificity: 1.0000 - AUC: 0.9990
-    Epoch 7: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0408 - mae: 0.0253 - accuracy: 1.0000 - Recall: 0.9807 - Precision: 0.9827 - Specificity: 1.0000 - AUC: 0.9990 - val_loss: 0.0298 - val_mae: 0.0217 - val_accuracy: 1.0000 - val_Recall: 1.0000 - val_Precision: 0.9766 - val_Specificity: 1.0000 - val_AUC: 0.9999
-    Epoch 8/20
-    235/245 [===========================>..] - ETA: 0s - loss: 0.0307 - mae: 0.0212 - accuracy: 1.0000 - Recall: 0.9858 - Precision: 0.9880 - Specificity: 1.0000 - AUC: 0.9995
-    Epoch 8: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0300 - mae: 0.0208 - accuracy: 1.0000 - Recall: 0.9864 - Precision: 0.9882 - Specificity: 1.0000 - AUC: 0.9995 - val_loss: 0.0222 - val_mae: 0.0177 - val_accuracy: 1.0000 - val_Recall: 0.9885 - val_Precision: 0.9979 - val_Specificity: 1.0000 - val_AUC: 0.9999
-    Epoch 9/20
-    234/245 [===========================>..] - ETA: 0s - loss: 0.0284 - mae: 0.0192 - accuracy: 1.0000 - Recall: 0.9872 - Precision: 0.9875 - Specificity: 1.0000 - AUC: 0.9995
-    Epoch 9: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0279 - mae: 0.0189 - accuracy: 1.0000 - Recall: 0.9875 - Precision: 0.9875 - Specificity: 1.0000 - AUC: 0.9996 - val_loss: 0.0275 - val_mae: 0.0194 - val_accuracy: 1.0000 - val_Recall: 0.9739 - val_Precision: 0.9989 - val_Specificity: 1.0000 - val_AUC: 0.9999
-    Epoch 10/20
-    233/245 [===========================>..] - ETA: 0s - loss: 0.0270 - mae: 0.0177 - accuracy: 1.0000 - Recall: 0.9868 - Precision: 0.9890 - Specificity: 1.0000 - AUC: 0.9996
-    Epoch 10: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0275 - mae: 0.0181 - accuracy: 1.0000 - Recall: 0.9867 - Precision: 0.9890 - Specificity: 1.0000 - AUC: 0.9996 - val_loss: 0.0299 - val_mae: 0.0193 - val_accuracy: 1.0000 - val_Recall: 0.9990 - val_Precision: 0.9716 - val_Specificity: 1.0000 - val_AUC: 0.9998
-    Epoch 11/20
-    243/245 [============================>.] - ETA: 0s - loss: 0.0340 - mae: 0.0200 - accuracy: 1.0000 - Recall: 0.9837 - Precision: 0.9847 - Specificity: 1.0000 - AUC: 0.9993
-    Epoch 11: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 2s 6ms/step - loss: 0.0339 - mae: 0.0199 - accuracy: 1.0000 - Recall: 0.9838 - Precision: 0.9846 - Specificity: 1.0000 - AUC: 0.9993 - val_loss: 0.0236 - val_mae: 0.0159 - val_accuracy: 1.0000 - val_Recall: 1.0000 - val_Precision: 0.9816 - val_Specificity: 1.0000 - val_AUC: 0.9999
-    Epoch 12/20
-    238/245 [============================>.] - ETA: 0s - loss: 0.0231 - mae: 0.0162 - accuracy: 1.0000 - Recall: 0.9890 - Precision: 0.9909 - Specificity: 1.0000 - AUC: 0.9997
-    Epoch 12: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 2s 6ms/step - loss: 0.0239 - mae: 0.0164 - accuracy: 1.0000 - Recall: 0.9888 - Precision: 0.9908 - Specificity: 1.0000 - AUC: 0.9997 - val_loss: 0.1015 - val_mae: 0.0398 - val_accuracy: 1.0000 - val_Recall: 0.9175 - val_Precision: 1.0000 - val_Specificity: 1.0000 - val_AUC: 0.9999
-    Epoch 13/20
-    242/245 [============================>.] - ETA: 0s - loss: 0.0367 - mae: 0.0204 - accuracy: 1.0000 - Recall: 0.9849 - Precision: 0.9834 - Specificity: 1.0000 - AUC: 0.9992
-    Epoch 13: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 2s 6ms/step - loss: 0.0365 - mae: 0.0202 - accuracy: 1.0000 - Recall: 0.9851 - Precision: 0.9836 - Specificity: 1.0000 - AUC: 0.9992 - val_loss: 0.0186 - val_mae: 0.0142 - val_accuracy: 1.0000 - val_Recall: 0.9958 - val_Precision: 0.9937 - val_Specificity: 1.0000 - val_AUC: 0.9999
-    Epoch 14/20
-    243/245 [============================>.] - ETA: 0s - loss: 0.0271 - mae: 0.0164 - accuracy: 1.0000 - Recall: 0.9897 - Precision: 0.9882 - Specificity: 1.0000 - AUC: 0.9996
-    Epoch 14: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0283 - mae: 0.0167 - accuracy: 1.0000 - Recall: 0.9890 - Precision: 0.9883 - Specificity: 1.0000 - AUC: 0.9995 - val_loss: 0.0462 - val_mae: 0.0244 - val_accuracy: 1.0000 - val_Recall: 0.9582 - val_Precision: 1.0000 - val_Specificity: 1.0000 - val_AUC: 0.9999
-    Epoch 15/20
-    242/245 [============================>.] - ETA: 0s - loss: 0.0336 - mae: 0.0188 - accuracy: 1.0000 - Recall: 0.9847 - Precision: 0.9865 - Specificity: 1.0000 - AUC: 0.9993
-    Epoch 15: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0335 - mae: 0.0187 - accuracy: 1.0000 - Recall: 0.9846 - Precision: 0.9867 - Specificity: 1.0000 - AUC: 0.9993 - val_loss: 0.0192 - val_mae: 0.0144 - val_accuracy: 1.0000 - val_Recall: 0.9937 - val_Precision: 0.9958 - val_Specificity: 1.0000 - val_AUC: 0.9998
-    Epoch 16/20
-    235/245 [===========================>..] - ETA: 0s - loss: 0.0246 - mae: 0.0160 - accuracy: 1.0000 - Recall: 0.9900 - Precision: 0.9894 - Specificity: 1.0000 - AUC: 0.9996
-    Epoch 16: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 5ms/step - loss: 0.0249 - mae: 0.0162 - accuracy: 1.0000 - Recall: 0.9896 - Precision: 0.9896 - Specificity: 1.0000 - AUC: 0.9996 - val_loss: 0.0182 - val_mae: 0.0133 - val_accuracy: 1.0000 - val_Recall: 0.9990 - val_Precision: 0.9876 - val_Specificity: 1.0000 - val_AUC: 0.9999
-    Epoch 17/20
-    235/245 [===========================>..] - ETA: 0s - loss: 0.0238 - mae: 0.0154 - accuracy: 1.0000 - Recall: 0.9894 - Precision: 0.9891 - Specificity: 1.0000 - AUC: 0.9997
-    Epoch 17: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 5ms/step - loss: 0.0235 - mae: 0.0153 - accuracy: 1.0000 - Recall: 0.9896 - Precision: 0.9893 - Specificity: 1.0000 - AUC: 0.9997 - val_loss: 0.0179 - val_mae: 0.0128 - val_accuracy: 1.0000 - val_Recall: 0.9948 - val_Precision: 0.9917 - val_Specificity: 1.0000 - val_AUC: 0.9999
-    Epoch 18/20
-    241/245 [============================>.] - ETA: 0s - loss: 0.0276 - mae: 0.0166 - accuracy: 1.0000 - Recall: 0.9872 - Precision: 0.9872 - Specificity: 1.0000 - AUC: 0.9995
-    Epoch 18: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 5ms/step - loss: 0.0279 - mae: 0.0167 - accuracy: 1.0000 - Recall: 0.9872 - Precision: 0.9870 - Specificity: 1.0000 - AUC: 0.9995 - val_loss: 0.0207 - val_mae: 0.0136 - val_accuracy: 1.0000 - val_Recall: 1.0000 - val_Precision: 0.9806 - val_Specificity: 1.0000 - val_AUC: 0.9999
-    Epoch 19/20
-    232/245 [===========================>..] - ETA: 0s - loss: 0.0346 - mae: 0.0181 - accuracy: 1.0000 - Recall: 0.9860 - Precision: 0.9857 - Specificity: 0.9997 - AUC: 0.9991
-    Epoch 19: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0343 - mae: 0.0181 - accuracy: 1.0000 - Recall: 0.9859 - Precision: 0.9859 - Specificity: 0.9998 - AUC: 0.9991 - val_loss: 0.0151 - val_mae: 0.0120 - val_accuracy: 1.0000 - val_Recall: 0.9927 - val_Precision: 0.9958 - val_Specificity: 1.0000 - val_AUC: 0.9999
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0206 - mae: 0.0120 - accuracy: 1.0000 - Recall: 0.9837 - Precision: 0.9868 - Specificity: 1.0000 - AUC: 0.9996 - val_loss: 0.0277 - val_mae: 0.0149 - val_accuracy: 1.0000 - val_Recall: 0.9518 - val_Precision: 0.9978 - val_Specificity: 1.0000 - val_AUC: 0.9997
     Epoch 20/20
-    241/245 [============================>.] - ETA: 0s - loss: 0.0210 - mae: 0.0140 - accuracy: 1.0000 - Recall: 0.9894 - Precision: 0.9918 - Specificity: 1.0000 - AUC: 0.9997
+    243/245 [============================>.] - ETA: 0s - loss: 0.0154 - mae: 0.0102 - accuracy: 1.0000 - Recall: 0.9868 - Precision: 0.9894 - Specificity: 1.0000 - AUC: 0.9998
     Epoch 20: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0209 - mae: 0.0140 - accuracy: 1.0000 - Recall: 0.9896 - Precision: 0.9919 - Specificity: 1.0000 - AUC: 0.9997 - val_loss: 0.0170 - val_mae: 0.0123 - val_accuracy: 1.0000 - val_Recall: 0.9958 - val_Precision: 0.9876 - val_Specificity: 1.0000 - val_AUC: 0.9999
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0154 - mae: 0.0102 - accuracy: 1.0000 - Recall: 0.9863 - Precision: 0.9895 - Specificity: 1.0000 - AUC: 0.9998 - val_loss: 0.0225 - val_mae: 0.0131 - val_accuracy: 1.0000 - val_Recall: 0.9602 - val_Precision: 1.0000 - val_Specificity: 1.0000 - val_AUC: 0.9998
     62/62 [==============================] - 0s 2ms/step
     
 
 
     
-![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_51_7.png)
+![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_52_3.png)
     
 
 
-    Accuracy: 0.986734693877551
+    Accuracy: 0.9795918367346939
     Precision: 1.0
-    Recall: 0.9728601252609603
-    F1-score: 0.9862433862433863
-    ROC AUC: 0.9864300626304802
+    Recall: 0.9161425576519916
+    F1-score: 0.9562363238512035
+    ROC AUC: 0.9580712788259957
+    MSE: 0.02040816326530612
+    RMSE: 0.14285714285714285
     Epoch 1/20
-    238/245 [============================>.] - ETA: 0s - loss: 0.2884 - mae: 0.2106 - accuracy: 1.0000 - Recall: 0.9108 - Precision: 0.8631 - Specificity: 0.9956 - AUC: 0.9582
+    241/245 [============================>.] - ETA: 0s - loss: 0.2369 - mae: 0.1696 - accuracy: 1.0000 - Recall: 0.6510 - Precision: 0.9278 - Specificity: 0.9969 - AUC: 0.9551
     Epoch 1: val_accuracy improved from -inf to 1.00000, saving model to best_model.h5
-    245/245 [==============================] - 3s 6ms/step - loss: 0.2834 - mae: 0.2071 - accuracy: 1.0000 - Recall: 0.9136 - Precision: 0.8655 - Specificity: 0.9968 - AUC: 0.9598 - val_loss: 0.1080 - val_mae: 0.0848 - val_accuracy: 1.0000 - val_Recall: 0.9781 - val_Precision: 0.9484 - val_Specificity: 1.0000 - val_AUC: 0.9967
+    245/245 [==============================] - 3s 6ms/step - loss: 0.2345 - mae: 0.1678 - accuracy: 1.0000 - Recall: 0.6551 - Precision: 0.9293 - Specificity: 0.9971 - AUC: 0.9561 - val_loss: 0.0644 - val_mae: 0.0518 - val_accuracy: 1.0000 - val_Recall: 0.9622 - val_Precision: 0.9642 - val_Specificity: 1.0000 - val_AUC: 0.9986
     Epoch 2/20
-     43/245 [====>.........................] - ETA: 0s - loss: 0.1067 - mae: 0.0818 - accuracy: 1.0000 - Recall: 0.9555 - Precision: 0.9643 - Specificity: 1.0000 - AUC: 0.9956
+     40/245 [===>..........................] - ETA: 0s - loss: 0.0735 - mae: 0.0550 - accuracy: 1.0000 - Recall: 0.9331 - Precision: 0.9490 - Specificity: 1.0000 - AUC: 0.9966
 
     /usr/local/lib/python3.10/dist-packages/keras/src/engine/training.py:3079: UserWarning: You are saving your model as an HDF5 file via `model.save()`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')`.
       saving_api.save_model(
     
 
-    233/245 [===========================>..] - ETA: 0s - loss: 0.0794 - mae: 0.0604 - accuracy: 1.0000 - Recall: 0.9733 - Precision: 0.9736 - Specificity: 1.0000 - AUC: 0.9975
+    242/245 [============================>.] - ETA: 0s - loss: 0.0651 - mae: 0.0476 - accuracy: 1.0000 - Recall: 0.9347 - Precision: 0.9550 - Specificity: 1.0000 - AUC: 0.9972
     Epoch 2: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0781 - mae: 0.0595 - accuracy: 1.0000 - Recall: 0.9734 - Precision: 0.9744 - Specificity: 1.0000 - AUC: 0.9976 - val_loss: 0.0621 - val_mae: 0.0477 - val_accuracy: 1.0000 - val_Recall: 0.9603 - val_Precision: 0.9924 - val_Specificity: 1.0000 - val_AUC: 0.9989
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0646 - mae: 0.0473 - accuracy: 1.0000 - Recall: 0.9354 - Precision: 0.9555 - Specificity: 1.0000 - AUC: 0.9972 - val_loss: 0.0519 - val_mae: 0.0383 - val_accuracy: 1.0000 - val_Recall: 0.9958 - val_Precision: 0.9368 - val_Specificity: 1.0000 - val_AUC: 0.9993
     Epoch 3/20
-    236/245 [===========================>..] - ETA: 0s - loss: 0.0500 - mae: 0.0377 - accuracy: 1.0000 - Recall: 0.9816 - Precision: 0.9808 - Specificity: 1.0000 - AUC: 0.9989
+    242/245 [============================>.] - ETA: 0s - loss: 0.0406 - mae: 0.0310 - accuracy: 1.0000 - Recall: 0.9645 - Precision: 0.9681 - Specificity: 1.0000 - AUC: 0.9991
     Epoch 3: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0498 - mae: 0.0375 - accuracy: 1.0000 - Recall: 0.9817 - Precision: 0.9810 - Specificity: 1.0000 - AUC: 0.9990 - val_loss: 0.0420 - val_mae: 0.0329 - val_accuracy: 1.0000 - val_Recall: 0.9708 - val_Precision: 0.9968 - val_Specificity: 1.0000 - val_AUC: 0.9997
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0405 - mae: 0.0308 - accuracy: 1.0000 - Recall: 0.9643 - Precision: 0.9684 - Specificity: 1.0000 - AUC: 0.9991 - val_loss: 0.0462 - val_mae: 0.0297 - val_accuracy: 1.0000 - val_Recall: 0.9076 - val_Precision: 1.0000 - val_Specificity: 1.0000 - val_AUC: 0.9995
     Epoch 4/20
-    238/245 [============================>.] - ETA: 0s - loss: 0.0554 - mae: 0.0359 - accuracy: 1.0000 - Recall: 0.9755 - Precision: 0.9774 - Specificity: 1.0000 - AUC: 0.9982
+    245/245 [==============================] - ETA: 0s - loss: 0.0377 - mae: 0.0262 - accuracy: 1.0000 - Recall: 0.9654 - Precision: 0.9725 - Specificity: 1.0000 - AUC: 0.9989
     Epoch 4: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0556 - mae: 0.0359 - accuracy: 1.0000 - Recall: 0.9757 - Precision: 0.9770 - Specificity: 1.0000 - AUC: 0.9981 - val_loss: 0.0476 - val_mae: 0.0343 - val_accuracy: 1.0000 - val_Recall: 0.9990 - val_Precision: 0.9599 - val_Specificity: 1.0000 - val_AUC: 0.9995
+    245/245 [==============================] - 1s 6ms/step - loss: 0.0377 - mae: 0.0262 - accuracy: 1.0000 - Recall: 0.9654 - Precision: 0.9725 - Specificity: 1.0000 - AUC: 0.9989 - val_loss: 0.0501 - val_mae: 0.0282 - val_accuracy: 1.0000 - val_Recall: 0.8971 - val_Precision: 1.0000 - val_Specificity: 1.0000 - val_AUC: 0.9997
     Epoch 5/20
-    243/245 [============================>.] - ETA: 0s - loss: 0.0366 - mae: 0.0266 - accuracy: 1.0000 - Recall: 0.9856 - Precision: 0.9861 - Specificity: 1.0000 - AUC: 0.9993
+    238/245 [============================>.] - ETA: 0s - loss: 0.0367 - mae: 0.0242 - accuracy: 1.0000 - Recall: 0.9664 - Precision: 0.9712 - Specificity: 1.0000 - AUC: 0.9989
     Epoch 5: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0368 - mae: 0.0267 - accuracy: 1.0000 - Recall: 0.9854 - Precision: 0.9862 - Specificity: 1.0000 - AUC: 0.9993 - val_loss: 0.0353 - val_mae: 0.0264 - val_accuracy: 1.0000 - val_Recall: 0.9718 - val_Precision: 0.9957 - val_Specificity: 1.0000 - val_AUC: 0.9996
+    245/245 [==============================] - 2s 7ms/step - loss: 0.0362 - mae: 0.0240 - accuracy: 1.0000 - Recall: 0.9675 - Precision: 0.9715 - Specificity: 1.0000 - AUC: 0.9990 - val_loss: 0.0286 - val_mae: 0.0201 - val_accuracy: 1.0000 - val_Recall: 0.9454 - val_Precision: 0.9956 - val_Specificity: 1.0000 - val_AUC: 0.9997
     Epoch 6/20
-    232/245 [===========================>..] - ETA: 0s - loss: 0.0331 - mae: 0.0236 - accuracy: 1.0000 - Recall: 0.9864 - Precision: 0.9875 - Specificity: 1.0000 - AUC: 0.9994
+    238/245 [============================>.] - ETA: 0s - loss: 0.0290 - mae: 0.0205 - accuracy: 1.0000 - Recall: 0.9725 - Precision: 0.9793 - Specificity: 1.0000 - AUC: 0.9994
     Epoch 6: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0331 - mae: 0.0236 - accuracy: 1.0000 - Recall: 0.9864 - Precision: 0.9875 - Specificity: 1.0000 - AUC: 0.9994 - val_loss: 0.0294 - val_mae: 0.0226 - val_accuracy: 1.0000 - val_Recall: 0.9969 - val_Precision: 0.9835 - val_Specificity: 1.0000 - val_AUC: 0.9998
+    245/245 [==============================] - 2s 7ms/step - loss: 0.0285 - mae: 0.0202 - accuracy: 1.0000 - Recall: 0.9722 - Precision: 0.9799 - Specificity: 1.0000 - AUC: 0.9994 - val_loss: 0.0238 - val_mae: 0.0176 - val_accuracy: 1.0000 - val_Recall: 1.0000 - val_Precision: 0.9577 - val_Specificity: 1.0000 - val_AUC: 0.9999
     Epoch 7/20
-    244/245 [============================>.] - ETA: 0s - loss: 0.0327 - mae: 0.0215 - accuracy: 1.0000 - Recall: 0.9866 - Precision: 0.9848 - Specificity: 1.0000 - AUC: 0.9994
+    236/245 [===========================>..] - ETA: 0s - loss: 0.0465 - mae: 0.0258 - accuracy: 1.0000 - Recall: 0.9554 - Precision: 0.9559 - Specificity: 1.0000 - AUC: 0.9978
     Epoch 7: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0327 - mae: 0.0215 - accuracy: 1.0000 - Recall: 0.9867 - Precision: 0.9849 - Specificity: 1.0000 - AUC: 0.9994 - val_loss: 0.0262 - val_mae: 0.0200 - val_accuracy: 1.0000 - val_Recall: 0.9791 - val_Precision: 0.9979 - val_Specificity: 1.0000 - val_AUC: 0.9998
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0460 - mae: 0.0256 - accuracy: 1.0000 - Recall: 0.9559 - Precision: 0.9574 - Specificity: 1.0000 - AUC: 0.9979 - val_loss: 0.0311 - val_mae: 0.0209 - val_accuracy: 1.0000 - val_Recall: 0.9979 - val_Precision: 0.9425 - val_Specificity: 1.0000 - val_AUC: 0.9998
     Epoch 8/20
-    233/245 [===========================>..] - ETA: 0s - loss: 0.0501 - mae: 0.0252 - accuracy: 1.0000 - Recall: 0.9816 - Precision: 0.9808 - Specificity: 0.9992 - AUC: 0.9979
+    236/245 [===========================>..] - ETA: 0s - loss: 0.0263 - mae: 0.0184 - accuracy: 1.0000 - Recall: 0.9745 - Precision: 0.9761 - Specificity: 1.0000 - AUC: 0.9995
     Epoch 8: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0526 - mae: 0.0259 - accuracy: 1.0000 - Recall: 0.9802 - Precision: 0.9807 - Specificity: 0.9993 - AUC: 0.9978 - val_loss: 0.0984 - val_mae: 0.0444 - val_accuracy: 1.0000 - val_Recall: 1.0000 - val_Precision: 0.9238 - val_Specificity: 1.0000 - val_AUC: 0.9992
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0257 - mae: 0.0181 - accuracy: 1.0000 - Recall: 0.9753 - Precision: 0.9769 - Specificity: 1.0000 - AUC: 0.9995 - val_loss: 0.0186 - val_mae: 0.0146 - val_accuracy: 1.0000 - val_Recall: 0.9811 - val_Precision: 0.9957 - val_Specificity: 1.0000 - val_AUC: 0.9999
     Epoch 9/20
-    235/245 [===========================>..] - ETA: 0s - loss: 0.0292 - mae: 0.0202 - accuracy: 1.0000 - Recall: 0.9896 - Precision: 0.9875 - Specificity: 1.0000 - AUC: 0.9995
+    242/245 [============================>.] - ETA: 0s - loss: 0.0227 - mae: 0.0160 - accuracy: 1.0000 - Recall: 0.9767 - Precision: 0.9834 - Specificity: 1.0000 - AUC: 0.9996
     Epoch 9: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 6ms/step - loss: 0.0290 - mae: 0.0202 - accuracy: 1.0000 - Recall: 0.9896 - Precision: 0.9880 - Specificity: 1.0000 - AUC: 0.9995 - val_loss: 0.0250 - val_mae: 0.0192 - val_accuracy: 1.0000 - val_Recall: 0.9948 - val_Precision: 0.9865 - val_Specificity: 1.0000 - val_AUC: 0.9998
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0225 - mae: 0.0159 - accuracy: 1.0000 - Recall: 0.9769 - Precision: 0.9836 - Specificity: 1.0000 - AUC: 0.9996 - val_loss: 0.0194 - val_mae: 0.0139 - val_accuracy: 1.0000 - val_Recall: 0.9664 - val_Precision: 0.9957 - val_Specificity: 1.0000 - val_AUC: 0.9998
     Epoch 10/20
-    243/245 [============================>.] - ETA: 0s - loss: 0.0221 - mae: 0.0159 - accuracy: 1.0000 - Recall: 0.9924 - Precision: 0.9913 - Specificity: 1.0000 - AUC: 0.9998
+    241/245 [============================>.] - ETA: 0s - loss: 0.0267 - mae: 0.0164 - accuracy: 1.0000 - Recall: 0.9754 - Precision: 0.9775 - Specificity: 1.0000 - AUC: 0.9994
     Epoch 10: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 6ms/step - loss: 0.0222 - mae: 0.0160 - accuracy: 1.0000 - Recall: 0.9924 - Precision: 0.9909 - Specificity: 1.0000 - AUC: 0.9998 - val_loss: 0.0551 - val_mae: 0.0304 - val_accuracy: 1.0000 - val_Recall: 1.0000 - val_Precision: 0.9457 - val_Specificity: 1.0000 - val_AUC: 0.9998
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0269 - mae: 0.0165 - accuracy: 1.0000 - Recall: 0.9748 - Precision: 0.9779 - Specificity: 1.0000 - AUC: 0.9994 - val_loss: 0.0636 - val_mae: 0.0256 - val_accuracy: 1.0000 - val_Recall: 0.8992 - val_Precision: 1.0000 - val_Specificity: 1.0000 - val_AUC: 0.9986
     Epoch 11/20
-    242/245 [============================>.] - ETA: 0s - loss: 0.0276 - mae: 0.0177 - accuracy: 1.0000 - Recall: 0.9889 - Precision: 0.9879 - Specificity: 1.0000 - AUC: 0.9995
+    236/245 [===========================>..] - ETA: 0s - loss: 0.0272 - mae: 0.0166 - accuracy: 1.0000 - Recall: 0.9728 - Precision: 0.9755 - Specificity: 1.0000 - AUC: 0.9994
     Epoch 11: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 2s 7ms/step - loss: 0.0274 - mae: 0.0176 - accuracy: 1.0000 - Recall: 0.9888 - Precision: 0.9880 - Specificity: 1.0000 - AUC: 0.9995 - val_loss: 0.0210 - val_mae: 0.0162 - val_accuracy: 1.0000 - val_Recall: 0.9969 - val_Precision: 0.9907 - val_Specificity: 1.0000 - val_AUC: 0.9999
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0273 - mae: 0.0167 - accuracy: 1.0000 - Recall: 0.9738 - Precision: 0.9748 - Specificity: 1.0000 - AUC: 0.9994 - val_loss: 0.0342 - val_mae: 0.0180 - val_accuracy: 1.0000 - val_Recall: 0.9349 - val_Precision: 1.0000 - val_Specificity: 1.0000 - val_AUC: 0.9998
     Epoch 12/20
-    236/245 [===========================>..] - ETA: 0s - loss: 0.0233 - mae: 0.0149 - accuracy: 1.0000 - Recall: 0.9919 - Precision: 0.9908 - Specificity: 1.0000 - AUC: 0.9997
+    234/245 [===========================>..] - ETA: 0s - loss: 0.0248 - mae: 0.0158 - accuracy: 1.0000 - Recall: 0.9758 - Precision: 0.9769 - Specificity: 1.0000 - AUC: 0.9995
     Epoch 12: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0232 - mae: 0.0149 - accuracy: 1.0000 - Recall: 0.9919 - Precision: 0.9906 - Specificity: 1.0000 - AUC: 0.9997 - val_loss: 0.0218 - val_mae: 0.0166 - val_accuracy: 1.0000 - val_Recall: 0.9885 - val_Precision: 0.9916 - val_Specificity: 1.0000 - val_AUC: 0.9998
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0262 - mae: 0.0162 - accuracy: 1.0000 - Recall: 0.9732 - Precision: 0.9768 - Specificity: 1.0000 - AUC: 0.9994 - val_loss: 0.0637 - val_mae: 0.0278 - val_accuracy: 1.0000 - val_Recall: 1.0000 - val_Precision: 0.8981 - val_Specificity: 1.0000 - val_AUC: 0.9999
     Epoch 13/20
-    240/245 [============================>.] - ETA: 0s - loss: 0.0372 - mae: 0.0192 - accuracy: 1.0000 - Recall: 0.9859 - Precision: 0.9851 - Specificity: 0.9995 - AUC: 0.9990
+    238/245 [============================>.] - ETA: 0s - loss: 0.0258 - mae: 0.0158 - accuracy: 1.0000 - Recall: 0.9768 - Precision: 0.9773 - Specificity: 1.0000 - AUC: 0.9995
     Epoch 13: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0369 - mae: 0.0191 - accuracy: 1.0000 - Recall: 0.9856 - Precision: 0.9854 - Specificity: 0.9995 - AUC: 0.9990 - val_loss: 0.0377 - val_mae: 0.0208 - val_accuracy: 1.0000 - val_Recall: 0.9624 - val_Precision: 1.0000 - val_Specificity: 1.0000 - val_AUC: 0.9998
-    Epoch 14/20
-    233/245 [===========================>..] - ETA: 0s - loss: 0.0214 - mae: 0.0145 - accuracy: 1.0000 - Recall: 0.9920 - Precision: 0.9901 - Specificity: 1.0000 - AUC: 0.9997
-    Epoch 14: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0229 - mae: 0.0151 - accuracy: 1.0000 - Recall: 0.9911 - Precision: 0.9893 - Specificity: 1.0000 - AUC: 0.9997 - val_loss: 0.0415 - val_mae: 0.0235 - val_accuracy: 1.0000 - val_Recall: 0.9979 - val_Precision: 0.9618 - val_Specificity: 1.0000 - val_AUC: 0.9996
-    Epoch 15/20
-    244/245 [============================>.] - ETA: 0s - loss: 0.0313 - mae: 0.0177 - accuracy: 1.0000 - Recall: 0.9869 - Precision: 0.9861 - Specificity: 1.0000 - AUC: 0.9993
-    Epoch 15: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0312 - mae: 0.0177 - accuracy: 1.0000 - Recall: 0.9869 - Precision: 0.9862 - Specificity: 1.0000 - AUC: 0.9993 - val_loss: 0.0498 - val_mae: 0.0266 - val_accuracy: 1.0000 - val_Recall: 1.0000 - val_Precision: 0.9523 - val_Specificity: 1.0000 - val_AUC: 0.9998
-    Epoch 16/20
-    234/245 [===========================>..] - ETA: 0s - loss: 0.0218 - mae: 0.0139 - accuracy: 1.0000 - Recall: 0.9899 - Precision: 0.9913 - Specificity: 1.0000 - AUC: 0.9997
-    Epoch 16: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0215 - mae: 0.0138 - accuracy: 1.0000 - Recall: 0.9903 - Precision: 0.9914 - Specificity: 1.0000 - AUC: 0.9997 - val_loss: 0.0257 - val_mae: 0.0164 - val_accuracy: 1.0000 - val_Recall: 0.9823 - val_Precision: 0.9947 - val_Specificity: 1.0000 - val_AUC: 0.9997
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0259 - mae: 0.0158 - accuracy: 1.0000 - Recall: 0.9759 - Precision: 0.9774 - Specificity: 1.0000 - AUC: 0.9994 - val_loss: 0.0397 - val_mae: 0.0207 - val_accuracy: 1.0000 - val_Recall: 1.0000 - val_Precision: 0.9279 - val_Specificity: 1.0000 - val_AUC: 1.0000
     62/62 [==============================] - 0s 2ms/step
     
 
 
     
-![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_51_11.png)
+![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_52_7.png)
     
 
 
-    Accuracy: 0.9800918836140888
+    Accuracy: 0.9775510204081632
     Precision: 1.0
-    Recall: 0.9592901878914405
-    F1-score: 0.9792221630261055
-    ROC AUC: 0.9796450939457202
+    Recall: 0.907563025210084
+    F1-score: 0.9515418502202644
+    ROC AUC: 0.953781512605042
+    MSE: 0.022448979591836733
+    RMSE: 0.14982983545287878
     Epoch 1/20
-    241/245 [============================>.] - ETA: 0s - loss: 0.2584 - mae: 0.1881 - accuracy: 1.0000 - Recall: 0.9084 - Precision: 0.8803 - Specificity: 0.9985 - AUC: 0.9648
+    239/245 [============================>.] - ETA: 0s - loss: 0.2102 - mae: 0.1528 - accuracy: 1.0000 - Recall: 0.6943 - Precision: 0.9291 - Specificity: 0.9991 - AUC: 0.9677
     Epoch 1: val_accuracy improved from -inf to 1.00000, saving model to best_model.h5
-    245/245 [==============================] - 3s 6ms/step - loss: 0.2556 - mae: 0.1861 - accuracy: 1.0000 - Recall: 0.9094 - Precision: 0.8820 - Specificity: 0.9985 - AUC: 0.9656 - val_loss: 0.1321 - val_mae: 0.0886 - val_accuracy: 1.0000 - val_Recall: 1.0000 - val_Precision: 0.8854 - val_Specificity: 1.0000 - val_AUC: 0.9983
+    245/245 [==============================] - 4s 10ms/step - loss: 0.2067 - mae: 0.1503 - accuracy: 1.0000 - Recall: 0.6976 - Precision: 0.9300 - Specificity: 0.9995 - AUC: 0.9687 - val_loss: 0.0595 - val_mae: 0.0479 - val_accuracy: 1.0000 - val_Recall: 0.9580 - val_Precision: 0.9785 - val_Specificity: 1.0000 - val_AUC: 0.9989
     Epoch 2/20
-     46/245 [====>.........................] - ETA: 0s - loss: 0.1000 - mae: 0.0732 - accuracy: 1.0000 - Recall: 0.9593 - Precision: 0.9579 - Specificity: 1.0000 - AUC: 0.9951
+     20/245 [=>............................] - ETA: 1s - loss: 0.0655 - mae: 0.0516 - accuracy: 1.0000 - Recall: 0.9647 - Precision: 0.9480 - Specificity: 1.0000 - AUC: 0.9982
 
     /usr/local/lib/python3.10/dist-packages/keras/src/engine/training.py:3079: UserWarning: You are saving your model as an HDF5 file via `model.save()`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')`.
       saving_api.save_model(
     
 
-    244/245 [============================>.] - ETA: 0s - loss: 0.0763 - mae: 0.0565 - accuracy: 1.0000 - Recall: 0.9696 - Precision: 0.9714 - Specificity: 1.0000 - AUC: 0.9973
+    242/245 [============================>.] - ETA: 0s - loss: 0.0613 - mae: 0.0432 - accuracy: 1.0000 - Recall: 0.9369 - Precision: 0.9546 - Specificity: 1.0000 - AUC: 0.9972
     Epoch 2: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0763 - mae: 0.0565 - accuracy: 1.0000 - Recall: 0.9695 - Precision: 0.9715 - Specificity: 1.0000 - AUC: 0.9973 - val_loss: 0.0474 - val_mae: 0.0382 - val_accuracy: 1.0000 - val_Recall: 0.9916 - val_Precision: 0.9804 - val_Specificity: 1.0000 - val_AUC: 0.9995
+    245/245 [==============================] - 2s 6ms/step - loss: 0.0609 - mae: 0.0430 - accuracy: 1.0000 - Recall: 0.9370 - Precision: 0.9551 - Specificity: 1.0000 - AUC: 0.9973 - val_loss: 0.0420 - val_mae: 0.0328 - val_accuracy: 1.0000 - val_Recall: 0.9895 - val_Precision: 0.9632 - val_Specificity: 1.0000 - val_AUC: 0.9993
     Epoch 3/20
-    245/245 [==============================] - ETA: 0s - loss: 0.0616 - mae: 0.0420 - accuracy: 1.0000 - Recall: 0.9715 - Precision: 0.9746 - Specificity: 1.0000 - AUC: 0.9978
+    243/245 [============================>.] - ETA: 0s - loss: 0.0433 - mae: 0.0305 - accuracy: 1.0000 - Recall: 0.9615 - Precision: 0.9681 - Specificity: 1.0000 - AUC: 0.9986
     Epoch 3: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 5ms/step - loss: 0.0616 - mae: 0.0420 - accuracy: 1.0000 - Recall: 0.9715 - Precision: 0.9746 - Specificity: 1.0000 - AUC: 0.9978 - val_loss: 0.0379 - val_mae: 0.0303 - val_accuracy: 1.0000 - val_Recall: 0.9802 - val_Precision: 0.9968 - val_Specificity: 1.0000 - val_AUC: 0.9997
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0430 - mae: 0.0303 - accuracy: 1.0000 - Recall: 0.9617 - Precision: 0.9683 - Specificity: 1.0000 - AUC: 0.9986 - val_loss: 0.0517 - val_mae: 0.0321 - val_accuracy: 1.0000 - val_Recall: 0.9076 - val_Precision: 0.9954 - val_Specificity: 1.0000 - val_AUC: 0.9989
     Epoch 4/20
-    241/245 [============================>.] - ETA: 0s - loss: 0.0449 - mae: 0.0315 - accuracy: 1.0000 - Recall: 0.9825 - Precision: 0.9820 - Specificity: 1.0000 - AUC: 0.9989
+    243/245 [============================>.] - ETA: 0s - loss: 0.0404 - mae: 0.0271 - accuracy: 1.0000 - Recall: 0.9614 - Precision: 0.9712 - Specificity: 1.0000 - AUC: 0.9987
     Epoch 4: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 2s 6ms/step - loss: 0.0451 - mae: 0.0315 - accuracy: 1.0000 - Recall: 0.9820 - Precision: 0.9822 - Specificity: 1.0000 - AUC: 0.9989 - val_loss: 0.0290 - val_mae: 0.0235 - val_accuracy: 1.0000 - val_Recall: 0.9937 - val_Precision: 0.9896 - val_Specificity: 1.0000 - val_AUC: 0.9998
+    245/245 [==============================] - 1s 6ms/step - loss: 0.0406 - mae: 0.0272 - accuracy: 1.0000 - Recall: 0.9606 - Precision: 0.9713 - Specificity: 1.0000 - AUC: 0.9987 - val_loss: 0.0498 - val_mae: 0.0298 - val_accuracy: 1.0000 - val_Recall: 0.8950 - val_Precision: 1.0000 - val_Specificity: 1.0000 - val_AUC: 0.9995
     Epoch 5/20
-    241/245 [============================>.] - ETA: 0s - loss: 0.0389 - mae: 0.0270 - accuracy: 1.0000 - Recall: 0.9833 - Precision: 0.9851 - Specificity: 1.0000 - AUC: 0.9992
+    239/245 [============================>.] - ETA: 0s - loss: 0.0374 - mae: 0.0239 - accuracy: 1.0000 - Recall: 0.9640 - Precision: 0.9686 - Specificity: 1.0000 - AUC: 0.9989
     Epoch 5: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 2s 7ms/step - loss: 0.0386 - mae: 0.0269 - accuracy: 1.0000 - Recall: 0.9836 - Precision: 0.9854 - Specificity: 1.0000 - AUC: 0.9992 - val_loss: 0.0256 - val_mae: 0.0204 - val_accuracy: 1.0000 - val_Recall: 0.9958 - val_Precision: 0.9886 - val_Specificity: 1.0000 - val_AUC: 0.9998
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0376 - mae: 0.0240 - accuracy: 1.0000 - Recall: 0.9617 - Precision: 0.9693 - Specificity: 1.0000 - AUC: 0.9989 - val_loss: 0.0260 - val_mae: 0.0207 - val_accuracy: 1.0000 - val_Recall: 0.9937 - val_Precision: 0.9813 - val_Specificity: 1.0000 - val_AUC: 0.9999
     Epoch 6/20
-    237/245 [============================>.] - ETA: 0s - loss: 0.0308 - mae: 0.0219 - accuracy: 1.0000 - Recall: 0.9881 - Precision: 0.9863 - Specificity: 1.0000 - AUC: 0.9995
+    245/245 [==============================] - ETA: 0s - loss: 0.0450 - mae: 0.0260 - accuracy: 1.0000 - Recall: 0.9612 - Precision: 0.9612 - Specificity: 0.9998 - AUC: 0.9976
     Epoch 6: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 6ms/step - loss: 0.0313 - mae: 0.0222 - accuracy: 1.0000 - Recall: 0.9877 - Precision: 0.9859 - Specificity: 1.0000 - AUC: 0.9995 - val_loss: 0.0254 - val_mae: 0.0194 - val_accuracy: 1.0000 - val_Recall: 0.9791 - val_Precision: 0.9989 - val_Specificity: 1.0000 - val_AUC: 0.9999
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0450 - mae: 0.0260 - accuracy: 1.0000 - Recall: 0.9612 - Precision: 0.9612 - Specificity: 0.9998 - AUC: 0.9976 - val_loss: 0.0238 - val_mae: 0.0193 - val_accuracy: 1.0000 - val_Recall: 0.9853 - val_Precision: 0.9915 - val_Specificity: 1.0000 - val_AUC: 0.9998
     Epoch 7/20
-    240/245 [============================>.] - ETA: 0s - loss: 0.0381 - mae: 0.0229 - accuracy: 1.0000 - Recall: 0.9840 - Precision: 0.9830 - Specificity: 1.0000 - AUC: 0.9990
+    233/245 [===========================>..] - ETA: 0s - loss: 0.0322 - mae: 0.0208 - accuracy: 1.0000 - Recall: 0.9691 - Precision: 0.9751 - Specificity: 1.0000 - AUC: 0.9992
     Epoch 7: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0380 - mae: 0.0228 - accuracy: 1.0000 - Recall: 0.9838 - Precision: 0.9833 - Specificity: 1.0000 - AUC: 0.9990 - val_loss: 0.0201 - val_mae: 0.0162 - val_accuracy: 1.0000 - val_Recall: 0.9969 - val_Precision: 0.9907 - val_Specificity: 1.0000 - val_AUC: 0.9999
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0318 - mae: 0.0206 - accuracy: 1.0000 - Recall: 0.9701 - Precision: 0.9752 - Specificity: 1.0000 - AUC: 0.9992 - val_loss: 0.0454 - val_mae: 0.0264 - val_accuracy: 1.0000 - val_Recall: 0.9055 - val_Precision: 1.0000 - val_Specificity: 1.0000 - val_AUC: 0.9998
     Epoch 8/20
-    234/245 [===========================>..] - ETA: 0s - loss: 0.0300 - mae: 0.0200 - accuracy: 1.0000 - Recall: 0.9857 - Precision: 0.9855 - Specificity: 1.0000 - AUC: 0.9995
+    242/245 [============================>.] - ETA: 0s - loss: 0.0265 - mae: 0.0185 - accuracy: 1.0000 - Recall: 0.9777 - Precision: 0.9782 - Specificity: 1.0000 - AUC: 0.9995
     Epoch 8: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0297 - mae: 0.0199 - accuracy: 1.0000 - Recall: 0.9862 - Precision: 0.9857 - Specificity: 1.0000 - AUC: 0.9995 - val_loss: 0.0175 - val_mae: 0.0142 - val_accuracy: 1.0000 - val_Recall: 1.0000 - val_Precision: 0.9907 - val_Specificity: 1.0000 - val_AUC: 1.0000
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0266 - mae: 0.0186 - accuracy: 1.0000 - Recall: 0.9774 - Precision: 0.9785 - Specificity: 1.0000 - AUC: 0.9995 - val_loss: 0.0334 - val_mae: 0.0215 - val_accuracy: 1.0000 - val_Recall: 1.0000 - val_Precision: 0.9407 - val_Specificity: 1.0000 - val_AUC: 0.9999
     Epoch 9/20
-    235/245 [===========================>..] - ETA: 0s - loss: 0.0338 - mae: 0.0207 - accuracy: 1.0000 - Recall: 0.9845 - Precision: 0.9861 - Specificity: 0.9997 - AUC: 0.9992
+    238/245 [============================>.] - ETA: 0s - loss: 0.0476 - mae: 0.0231 - accuracy: 1.0000 - Recall: 0.9608 - Precision: 0.9618 - Specificity: 1.0000 - AUC: 0.9967
     Epoch 9: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0339 - mae: 0.0208 - accuracy: 1.0000 - Recall: 0.9843 - Precision: 0.9864 - Specificity: 0.9998 - AUC: 0.9992 - val_loss: 0.0428 - val_mae: 0.0231 - val_accuracy: 1.0000 - val_Recall: 1.0000 - val_Precision: 0.9599 - val_Specificity: 1.0000 - val_AUC: 0.9999
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0483 - mae: 0.0236 - accuracy: 1.0000 - Recall: 0.9606 - Precision: 0.9591 - Specificity: 1.0000 - AUC: 0.9967 - val_loss: 0.1110 - val_mae: 0.0438 - val_accuracy: 1.0000 - val_Recall: 0.8235 - val_Precision: 1.0000 - val_Specificity: 1.0000 - val_AUC: 0.9963
     Epoch 10/20
-    240/245 [============================>.] - ETA: 0s - loss: 0.0428 - mae: 0.0226 - accuracy: 1.0000 - Recall: 0.9816 - Precision: 0.9829 - Specificity: 1.0000 - AUC: 0.9989
+    239/245 [============================>.] - ETA: 0s - loss: 0.0274 - mae: 0.0186 - accuracy: 1.0000 - Recall: 0.9720 - Precision: 0.9778 - Specificity: 1.0000 - AUC: 0.9994
     Epoch 10: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 5ms/step - loss: 0.0427 - mae: 0.0227 - accuracy: 1.0000 - Recall: 0.9820 - Precision: 0.9825 - Specificity: 1.0000 - AUC: 0.9989 - val_loss: 0.0213 - val_mae: 0.0163 - val_accuracy: 1.0000 - val_Recall: 0.9896 - val_Precision: 0.9989 - val_Specificity: 1.0000 - val_AUC: 0.9999
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0277 - mae: 0.0188 - accuracy: 1.0000 - Recall: 0.9717 - Precision: 0.9773 - Specificity: 1.0000 - AUC: 0.9994 - val_loss: 0.0200 - val_mae: 0.0162 - val_accuracy: 1.0000 - val_Recall: 0.9874 - val_Precision: 0.9874 - val_Specificity: 1.0000 - val_AUC: 0.9999
     Epoch 11/20
-    233/245 [===========================>..] - ETA: 0s - loss: 0.0323 - mae: 0.0196 - accuracy: 1.0000 - Recall: 0.9851 - Precision: 0.9868 - Specificity: 1.0000 - AUC: 0.9994
+    239/245 [============================>.] - ETA: 0s - loss: 0.0284 - mae: 0.0181 - accuracy: 1.0000 - Recall: 0.9736 - Precision: 0.9742 - Specificity: 1.0000 - AUC: 0.9993
     Epoch 11: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0319 - mae: 0.0194 - accuracy: 1.0000 - Recall: 0.9856 - Precision: 0.9869 - Specificity: 1.0000 - AUC: 0.9994 - val_loss: 0.0231 - val_mae: 0.0163 - val_accuracy: 1.0000 - val_Recall: 1.0000 - val_Precision: 0.9806 - val_Specificity: 1.0000 - val_AUC: 0.9999
+    245/245 [==============================] - 2s 7ms/step - loss: 0.0284 - mae: 0.0181 - accuracy: 1.0000 - Recall: 0.9732 - Precision: 0.9748 - Specificity: 1.0000 - AUC: 0.9993 - val_loss: 0.0235 - val_mae: 0.0169 - val_accuracy: 1.0000 - val_Recall: 0.9979 - val_Precision: 0.9596 - val_Specificity: 1.0000 - val_AUC: 0.9998
     Epoch 12/20
-    241/245 [============================>.] - ETA: 0s - loss: 0.0241 - mae: 0.0166 - accuracy: 1.0000 - Recall: 0.9894 - Precision: 0.9909 - Specificity: 1.0000 - AUC: 0.9997
+    241/245 [============================>.] - ETA: 0s - loss: 0.0275 - mae: 0.0171 - accuracy: 1.0000 - Recall: 0.9765 - Precision: 0.9729 - Specificity: 0.9998 - AUC: 0.9993
     Epoch 12: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0242 - mae: 0.0167 - accuracy: 1.0000 - Recall: 0.9893 - Precision: 0.9906 - Specificity: 1.0000 - AUC: 0.9997 - val_loss: 0.0148 - val_mae: 0.0120 - val_accuracy: 1.0000 - val_Recall: 0.9927 - val_Precision: 0.9989 - val_Specificity: 1.0000 - val_AUC: 1.0000
+    245/245 [==============================] - 2s 7ms/step - loss: 0.0273 - mae: 0.0170 - accuracy: 1.0000 - Recall: 0.9764 - Precision: 0.9733 - Specificity: 0.9998 - AUC: 0.9993 - val_loss: 0.0231 - val_mae: 0.0163 - val_accuracy: 1.0000 - val_Recall: 0.9643 - val_Precision: 0.9978 - val_Specificity: 1.0000 - val_AUC: 0.9997
     Epoch 13/20
-    244/245 [============================>.] - ETA: 0s - loss: 0.0292 - mae: 0.0173 - accuracy: 1.0000 - Recall: 0.9877 - Precision: 0.9869 - Specificity: 1.0000 - AUC: 0.9995
+    234/245 [===========================>..] - ETA: 0s - loss: 0.0249 - mae: 0.0160 - accuracy: 1.0000 - Recall: 0.9763 - Precision: 0.9763 - Specificity: 1.0000 - AUC: 0.9995
     Epoch 13: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 5ms/step - loss: 0.0291 - mae: 0.0173 - accuracy: 1.0000 - Recall: 0.9877 - Precision: 0.9870 - Specificity: 1.0000 - AUC: 0.9995 - val_loss: 0.0176 - val_mae: 0.0132 - val_accuracy: 1.0000 - val_Recall: 1.0000 - val_Precision: 0.9886 - val_Specificity: 1.0000 - val_AUC: 0.9999
+    245/245 [==============================] - 2s 7ms/step - loss: 0.0246 - mae: 0.0159 - accuracy: 1.0000 - Recall: 0.9769 - Precision: 0.9769 - Specificity: 1.0000 - AUC: 0.9995 - val_loss: 0.0173 - val_mae: 0.0133 - val_accuracy: 1.0000 - val_Recall: 0.9790 - val_Precision: 0.9936 - val_Specificity: 1.0000 - val_AUC: 0.9999
     Epoch 14/20
-    236/245 [===========================>..] - ETA: 0s - loss: 0.0347 - mae: 0.0193 - accuracy: 1.0000 - Recall: 0.9843 - Precision: 0.9854 - Specificity: 0.9997 - AUC: 0.9992
+    242/245 [============================>.] - ETA: 0s - loss: 0.0310 - mae: 0.0169 - accuracy: 1.0000 - Recall: 0.9719 - Precision: 0.9792 - Specificity: 1.0000 - AUC: 0.9992
     Epoch 14: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 5ms/step - loss: 0.0341 - mae: 0.0191 - accuracy: 1.0000 - Recall: 0.9849 - Precision: 0.9859 - Specificity: 0.9998 - AUC: 0.9992 - val_loss: 0.0247 - val_mae: 0.0166 - val_accuracy: 1.0000 - val_Recall: 0.9791 - val_Precision: 1.0000 - val_Specificity: 1.0000 - val_AUC: 0.9999
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0313 - mae: 0.0170 - accuracy: 1.0000 - Recall: 0.9711 - Precision: 0.9794 - Specificity: 1.0000 - AUC: 0.9992 - val_loss: 0.0187 - val_mae: 0.0143 - val_accuracy: 1.0000 - val_Recall: 0.9937 - val_Precision: 0.9773 - val_Specificity: 1.0000 - val_AUC: 0.9999
     Epoch 15/20
-    244/245 [============================>.] - ETA: 0s - loss: 0.0230 - mae: 0.0152 - accuracy: 1.0000 - Recall: 0.9887 - Precision: 0.9905 - Specificity: 1.0000 - AUC: 0.9997
+    237/245 [============================>.] - ETA: 0s - loss: 0.0193 - mae: 0.0134 - accuracy: 1.0000 - Recall: 0.9816 - Precision: 0.9832 - Specificity: 1.0000 - AUC: 0.9997
     Epoch 15: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 2s 6ms/step - loss: 0.0229 - mae: 0.0152 - accuracy: 1.0000 - Recall: 0.9888 - Precision: 0.9906 - Specificity: 1.0000 - AUC: 0.9997 - val_loss: 0.0232 - val_mae: 0.0155 - val_accuracy: 1.0000 - val_Recall: 0.9791 - val_Precision: 1.0000 - val_Specificity: 1.0000 - val_AUC: 0.9999
+    245/245 [==============================] - 1s 6ms/step - loss: 0.0192 - mae: 0.0134 - accuracy: 1.0000 - Recall: 0.9816 - Precision: 0.9832 - Specificity: 1.0000 - AUC: 0.9997 - val_loss: 0.0254 - val_mae: 0.0166 - val_accuracy: 1.0000 - val_Recall: 0.9412 - val_Precision: 1.0000 - val_Specificity: 1.0000 - val_AUC: 0.9999
     Epoch 16/20
-    236/245 [===========================>..] - ETA: 0s - loss: 0.0258 - mae: 0.0155 - accuracy: 1.0000 - Recall: 0.9897 - Precision: 0.9886 - Specificity: 1.0000 - AUC: 0.9996
+    245/245 [==============================] - ETA: 0s - loss: 0.0236 - mae: 0.0146 - accuracy: 1.0000 - Recall: 0.9795 - Precision: 0.9780 - Specificity: 1.0000 - AUC: 0.9993
     Epoch 16: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 2s 6ms/step - loss: 0.0258 - mae: 0.0155 - accuracy: 1.0000 - Recall: 0.9890 - Precision: 0.9890 - Specificity: 1.0000 - AUC: 0.9996 - val_loss: 0.0177 - val_mae: 0.0127 - val_accuracy: 1.0000 - val_Recall: 1.0000 - val_Precision: 0.9846 - val_Specificity: 1.0000 - val_AUC: 0.9999
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0236 - mae: 0.0146 - accuracy: 1.0000 - Recall: 0.9795 - Precision: 0.9780 - Specificity: 1.0000 - AUC: 0.9993 - val_loss: 0.0973 - val_mae: 0.0342 - val_accuracy: 1.0000 - val_Recall: 0.8613 - val_Precision: 1.0000 - val_Specificity: 1.0000 - val_AUC: 0.9968
     Epoch 17/20
-    239/245 [============================>.] - ETA: 0s - loss: 0.0227 - mae: 0.0145 - accuracy: 1.0000 - Recall: 0.9893 - Precision: 0.9896 - Specificity: 1.0000 - AUC: 0.9997
+    243/245 [============================>.] - ETA: 0s - loss: 0.0327 - mae: 0.0178 - accuracy: 1.0000 - Recall: 0.9688 - Precision: 0.9719 - Specificity: 1.0000 - AUC: 0.9992
     Epoch 17: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 6ms/step - loss: 0.0224 - mae: 0.0144 - accuracy: 1.0000 - Recall: 0.9896 - Precision: 0.9896 - Specificity: 1.0000 - AUC: 0.9997 - val_loss: 0.0134 - val_mae: 0.0106 - val_accuracy: 1.0000 - val_Recall: 0.9948 - val_Precision: 0.9979 - val_Specificity: 1.0000 - val_AUC: 0.9999
+    245/245 [==============================] - 2s 7ms/step - loss: 0.0325 - mae: 0.0177 - accuracy: 1.0000 - Recall: 0.9690 - Precision: 0.9721 - Specificity: 1.0000 - AUC: 0.9992 - val_loss: 0.0197 - val_mae: 0.0141 - val_accuracy: 1.0000 - val_Recall: 0.9664 - val_Precision: 1.0000 - val_Specificity: 1.0000 - val_AUC: 0.9999
     Epoch 18/20
-    244/245 [============================>.] - ETA: 0s - loss: 0.0333 - mae: 0.0168 - accuracy: 1.0000 - Recall: 0.9874 - Precision: 0.9866 - Specificity: 1.0000 - AUC: 0.9991
+    236/245 [===========================>..] - ETA: 0s - loss: 0.0215 - mae: 0.0134 - accuracy: 1.0000 - Recall: 0.9809 - Precision: 0.9836 - Specificity: 1.0000 - AUC: 0.9996
     Epoch 18: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 5ms/step - loss: 0.0333 - mae: 0.0169 - accuracy: 1.0000 - Recall: 0.9875 - Precision: 0.9867 - Specificity: 1.0000 - AUC: 0.9991 - val_loss: 0.0269 - val_mae: 0.0172 - val_accuracy: 1.0000 - val_Recall: 0.9708 - val_Precision: 1.0000 - val_Specificity: 1.0000 - val_AUC: 0.9999
+    245/245 [==============================] - 1s 6ms/step - loss: 0.0221 - mae: 0.0136 - accuracy: 1.0000 - Recall: 0.9816 - Precision: 0.9821 - Specificity: 1.0000 - AUC: 0.9996 - val_loss: 0.0171 - val_mae: 0.0127 - val_accuracy: 1.0000 - val_Recall: 0.9790 - val_Precision: 0.9957 - val_Specificity: 1.0000 - val_AUC: 0.9999
     Epoch 19/20
-    237/245 [============================>.] - ETA: 0s - loss: 0.0426 - mae: 0.0219 - accuracy: 1.0000 - Recall: 0.9820 - Precision: 0.9846 - Specificity: 0.9997 - AUC: 0.9985
+    233/245 [===========================>..] - ETA: 0s - loss: 0.0211 - mae: 0.0137 - accuracy: 1.0000 - Recall: 0.9803 - Precision: 0.9835 - Specificity: 1.0000 - AUC: 0.9996
     Epoch 19: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0420 - mae: 0.0218 - accuracy: 1.0000 - Recall: 0.9825 - Precision: 0.9846 - Specificity: 0.9998 - AUC: 0.9985 - val_loss: 0.0241 - val_mae: 0.0167 - val_accuracy: 1.0000 - val_Recall: 0.9990 - val_Precision: 0.9825 - val_Specificity: 1.0000 - val_AUC: 0.9999
+    245/245 [==============================] - 1s 6ms/step - loss: 0.0213 - mae: 0.0137 - accuracy: 1.0000 - Recall: 0.9790 - Precision: 0.9836 - Specificity: 1.0000 - AUC: 0.9996 - val_loss: 0.0158 - val_mae: 0.0117 - val_accuracy: 1.0000 - val_Recall: 0.9979 - val_Precision: 0.9834 - val_Specificity: 1.0000 - val_AUC: 0.9999
     Epoch 20/20
-    234/245 [===========================>..] - ETA: 0s - loss: 0.0249 - mae: 0.0159 - accuracy: 1.0000 - Recall: 0.9885 - Precision: 0.9899 - Specificity: 1.0000 - AUC: 0.9996
+    240/245 [============================>.] - ETA: 0s - loss: 0.0286 - mae: 0.0152 - accuracy: 1.0000 - Recall: 0.9765 - Precision: 0.9765 - Specificity: 1.0000 - AUC: 0.9994
     Epoch 20: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0248 - mae: 0.0159 - accuracy: 1.0000 - Recall: 0.9885 - Precision: 0.9898 - Specificity: 1.0000 - AUC: 0.9996 - val_loss: 0.0215 - val_mae: 0.0144 - val_accuracy: 1.0000 - val_Recall: 0.9823 - val_Precision: 0.9989 - val_Specificity: 1.0000 - val_AUC: 0.9999
-    62/62 [==============================] - 0s 2ms/step
+    245/245 [==============================] - 2s 7ms/step - loss: 0.0286 - mae: 0.0151 - accuracy: 1.0000 - Recall: 0.9764 - Precision: 0.9769 - Specificity: 1.0000 - AUC: 0.9994 - val_loss: 0.0234 - val_mae: 0.0153 - val_accuracy: 1.0000 - val_Recall: 0.9496 - val_Precision: 1.0000 - val_Specificity: 1.0000 - val_AUC: 0.9999
+    62/62 [==============================] - 0s 3ms/step
     
 
 
     
-![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_51_15.png)
+![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_52_11.png)
     
 
 
-    Accuracy: 0.9739663093415007
+    Accuracy: 0.9729453802960695
     Precision: 1.0
-    Recall: 0.9467640918580376
-    F1-score: 0.9726541554959786
-    ROC AUC: 0.9733820459290188
+    Recall: 0.8886554621848739
+    F1-score: 0.9410456062291435
+    ROC AUC: 0.944327731092437
+    MSE: 0.027054619703930576
+    RMSE: 0.16448288574782052
     Epoch 1/20
-    234/245 [===========================>..] - ETA: 0s - loss: 0.3023 - mae: 0.2215 - accuracy: 1.0000 - Recall: 0.8213 - Precision: 0.9004 - Specificity: 0.9958 - AUC: 0.9528
+    240/245 [============================>.] - ETA: 0s - loss: 0.2170 - mae: 0.1564 - accuracy: 1.0000 - Recall: 0.6876 - Precision: 0.9295 - Specificity: 0.9998 - AUC: 0.9624
     Epoch 1: val_accuracy improved from -inf to 1.00000, saving model to best_model.h5
-    245/245 [==============================] - 3s 8ms/step - loss: 0.2936 - mae: 0.2154 - accuracy: 1.0000 - Recall: 0.8280 - Precision: 0.9037 - Specificity: 0.9965 - AUC: 0.9557 - val_loss: 0.1306 - val_mae: 0.0933 - val_accuracy: 1.0000 - val_Recall: 0.9979 - val_Precision: 0.8959 - val_Specificity: 1.0000 - val_AUC: 0.9979
+    245/245 [==============================] - 4s 9ms/step - loss: 0.2137 - mae: 0.1542 - accuracy: 1.0000 - Recall: 0.6950 - Precision: 0.9311 - Specificity: 0.9998 - AUC: 0.9638 - val_loss: 0.0771 - val_mae: 0.0595 - val_accuracy: 1.0000 - val_Recall: 0.9979 - val_Precision: 0.9013 - val_Specificity: 1.0000 - val_AUC: 0.9990
     Epoch 2/20
-     28/245 [==>...........................] - ETA: 0s - loss: 0.1110 - mae: 0.0854 - accuracy: 1.0000 - Recall: 0.9569 - Precision: 0.9569 - Specificity: 1.0000 - AUC: 0.9956
+     19/245 [=>............................] - ETA: 1s - loss: 0.0770 - mae: 0.0527 - accuracy: 1.0000 - Recall: 0.9220 - Precision: 0.9489 - Specificity: 1.0000 - AUC: 0.9951
 
     /usr/local/lib/python3.10/dist-packages/keras/src/engine/training.py:3079: UserWarning: You are saving your model as an HDF5 file via `model.save()`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')`.
       saving_api.save_model(
     
 
-    231/245 [===========================>..] - ETA: 0s - loss: 0.0874 - mae: 0.0658 - accuracy: 1.0000 - Recall: 0.9654 - Precision: 0.9689 - Specificity: 1.0000 - AUC: 0.9967
+    242/245 [============================>.] - ETA: 0s - loss: 0.0602 - mae: 0.0430 - accuracy: 1.0000 - Recall: 0.9437 - Precision: 0.9569 - Specificity: 1.0000 - AUC: 0.9974
     Epoch 2: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 5ms/step - loss: 0.0859 - mae: 0.0646 - accuracy: 1.0000 - Recall: 0.9663 - Precision: 0.9691 - Specificity: 1.0000 - AUC: 0.9968 - val_loss: 0.0561 - val_mae: 0.0432 - val_accuracy: 1.0000 - val_Recall: 0.9572 - val_Precision: 1.0000 - val_Specificity: 1.0000 - val_AUC: 0.9997
+    245/245 [==============================] - 2s 6ms/step - loss: 0.0604 - mae: 0.0431 - accuracy: 1.0000 - Recall: 0.9444 - Precision: 0.9554 - Specificity: 1.0000 - AUC: 0.9974 - val_loss: 0.0369 - val_mae: 0.0297 - val_accuracy: 1.0000 - val_Recall: 0.9580 - val_Precision: 0.9956 - val_Specificity: 1.0000 - val_AUC: 0.9997
     Epoch 3/20
-    241/245 [============================>.] - ETA: 0s - loss: 0.0593 - mae: 0.0436 - accuracy: 1.0000 - Recall: 0.9764 - Precision: 0.9758 - Specificity: 1.0000 - AUC: 0.9983
+    237/245 [============================>.] - ETA: 0s - loss: 0.0485 - mae: 0.0335 - accuracy: 1.0000 - Recall: 0.9529 - Precision: 0.9623 - Specificity: 1.0000 - AUC: 0.9982
     Epoch 3: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0590 - mae: 0.0434 - accuracy: 1.0000 - Recall: 0.9768 - Precision: 0.9763 - Specificity: 1.0000 - AUC: 0.9983 - val_loss: 0.0393 - val_mae: 0.0313 - val_accuracy: 1.0000 - val_Recall: 0.9916 - val_Precision: 0.9865 - val_Specificity: 1.0000 - val_AUC: 0.9996
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0476 - mae: 0.0329 - accuracy: 1.0000 - Recall: 0.9533 - Precision: 0.9634 - Specificity: 1.0000 - AUC: 0.9983 - val_loss: 0.0411 - val_mae: 0.0273 - val_accuracy: 1.0000 - val_Recall: 0.9118 - val_Precision: 1.0000 - val_Specificity: 1.0000 - val_AUC: 0.9997
     Epoch 4/20
-    231/245 [===========================>..] - ETA: 0s - loss: 0.0506 - mae: 0.0355 - accuracy: 1.0000 - Recall: 0.9786 - Precision: 0.9808 - Specificity: 1.0000 - AUC: 0.9986
+    236/245 [===========================>..] - ETA: 0s - loss: 0.0360 - mae: 0.0252 - accuracy: 1.0000 - Recall: 0.9673 - Precision: 0.9742 - Specificity: 1.0000 - AUC: 0.9990
     Epoch 4: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0520 - mae: 0.0359 - accuracy: 1.0000 - Recall: 0.9786 - Precision: 0.9799 - Specificity: 1.0000 - AUC: 0.9985 - val_loss: 0.0346 - val_mae: 0.0262 - val_accuracy: 1.0000 - val_Recall: 0.9718 - val_Precision: 0.9989 - val_Specificity: 1.0000 - val_AUC: 0.9998
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0364 - mae: 0.0253 - accuracy: 1.0000 - Recall: 0.9669 - Precision: 0.9725 - Specificity: 1.0000 - AUC: 0.9990 - val_loss: 0.0231 - val_mae: 0.0187 - val_accuracy: 1.0000 - val_Recall: 0.9769 - val_Precision: 0.9936 - val_Specificity: 1.0000 - val_AUC: 0.9999
     Epoch 5/20
-    244/245 [============================>.] - ETA: 0s - loss: 0.0361 - mae: 0.0266 - accuracy: 1.0000 - Recall: 0.9856 - Precision: 0.9856 - Specificity: 1.0000 - AUC: 0.9994
+    238/245 [============================>.] - ETA: 0s - loss: 0.0335 - mae: 0.0226 - accuracy: 1.0000 - Recall: 0.9715 - Precision: 0.9746 - Specificity: 1.0000 - AUC: 0.9991
     Epoch 5: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 5ms/step - loss: 0.0365 - mae: 0.0268 - accuracy: 1.0000 - Recall: 0.9856 - Precision: 0.9851 - Specificity: 1.0000 - AUC: 0.9994 - val_loss: 0.0513 - val_mae: 0.0321 - val_accuracy: 1.0000 - val_Recall: 0.9990 - val_Precision: 0.9541 - val_Specificity: 1.0000 - val_AUC: 0.9998
+    245/245 [==============================] - 1s 6ms/step - loss: 0.0341 - mae: 0.0229 - accuracy: 1.0000 - Recall: 0.9680 - Precision: 0.9751 - Specificity: 1.0000 - AUC: 0.9991 - val_loss: 0.0267 - val_mae: 0.0186 - val_accuracy: 1.0000 - val_Recall: 0.9622 - val_Precision: 0.9957 - val_Specificity: 1.0000 - val_AUC: 0.9996
     Epoch 6/20
-    242/245 [============================>.] - ETA: 0s - loss: 0.0377 - mae: 0.0260 - accuracy: 1.0000 - Recall: 0.9844 - Precision: 0.9857 - Specificity: 1.0000 - AUC: 0.9991
+    234/245 [===========================>..] - ETA: 0s - loss: 0.0341 - mae: 0.0218 - accuracy: 1.0000 - Recall: 0.9699 - Precision: 0.9720 - Specificity: 1.0000 - AUC: 0.9988
     Epoch 6: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 6ms/step - loss: 0.0376 - mae: 0.0259 - accuracy: 1.0000 - Recall: 0.9843 - Precision: 0.9859 - Specificity: 1.0000 - AUC: 0.9991 - val_loss: 0.0284 - val_mae: 0.0199 - val_accuracy: 1.0000 - val_Recall: 0.9969 - val_Precision: 0.9775 - val_Specificity: 1.0000 - val_AUC: 0.9997
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0342 - mae: 0.0219 - accuracy: 1.0000 - Recall: 0.9696 - Precision: 0.9711 - Specificity: 1.0000 - AUC: 0.9988 - val_loss: 0.0222 - val_mae: 0.0165 - val_accuracy: 1.0000 - val_Recall: 0.9643 - val_Precision: 0.9957 - val_Specificity: 1.0000 - val_AUC: 0.9998
     Epoch 7/20
-    240/245 [============================>.] - ETA: 0s - loss: 0.0304 - mae: 0.0213 - accuracy: 1.0000 - Recall: 0.9888 - Precision: 0.9857 - Specificity: 1.0000 - AUC: 0.9995
+    245/245 [==============================] - ETA: 0s - loss: 0.0334 - mae: 0.0205 - accuracy: 1.0000 - Recall: 0.9696 - Precision: 0.9736 - Specificity: 1.0000 - AUC: 0.9991
     Epoch 7: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 6ms/step - loss: 0.0304 - mae: 0.0213 - accuracy: 1.0000 - Recall: 0.9883 - Precision: 0.9859 - Specificity: 1.0000 - AUC: 0.9995 - val_loss: 0.0271 - val_mae: 0.0194 - val_accuracy: 1.0000 - val_Recall: 0.9979 - val_Precision: 0.9765 - val_Specificity: 1.0000 - val_AUC: 0.9999
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0334 - mae: 0.0205 - accuracy: 1.0000 - Recall: 0.9696 - Precision: 0.9736 - Specificity: 1.0000 - AUC: 0.9991 - val_loss: 0.0199 - val_mae: 0.0158 - val_accuracy: 1.0000 - val_Recall: 0.9853 - val_Precision: 0.9915 - val_Specificity: 1.0000 - val_AUC: 0.9999
     Epoch 8/20
-    244/245 [============================>.] - ETA: 0s - loss: 0.0353 - mae: 0.0219 - accuracy: 1.0000 - Recall: 0.9848 - Precision: 0.9840 - Specificity: 1.0000 - AUC: 0.9992
+    240/245 [============================>.] - ETA: 0s - loss: 0.0300 - mae: 0.0190 - accuracy: 1.0000 - Recall: 0.9703 - Precision: 0.9766 - Specificity: 1.0000 - AUC: 0.9993
     Epoch 8: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 5ms/step - loss: 0.0353 - mae: 0.0219 - accuracy: 1.0000 - Recall: 0.9846 - Precision: 0.9841 - Specificity: 1.0000 - AUC: 0.9992 - val_loss: 0.0210 - val_mae: 0.0161 - val_accuracy: 1.0000 - val_Recall: 0.9864 - val_Precision: 0.9989 - val_Specificity: 1.0000 - val_AUC: 0.9999
+    245/245 [==============================] - 2s 6ms/step - loss: 0.0311 - mae: 0.0193 - accuracy: 1.0000 - Recall: 0.9711 - Precision: 0.9747 - Specificity: 1.0000 - AUC: 0.9992 - val_loss: 0.0526 - val_mae: 0.0253 - val_accuracy: 1.0000 - val_Recall: 0.9055 - val_Precision: 1.0000 - val_Specificity: 1.0000 - val_AUC: 0.9999
     Epoch 9/20
-    243/245 [============================>.] - ETA: 0s - loss: 0.0289 - mae: 0.0195 - accuracy: 1.0000 - Recall: 0.9871 - Precision: 0.9876 - Specificity: 1.0000 - AUC: 0.9995
+    245/245 [==============================] - ETA: 0s - loss: 0.0299 - mae: 0.0181 - accuracy: 1.0000 - Recall: 0.9711 - Precision: 0.9768 - Specificity: 1.0000 - AUC: 0.9988
     Epoch 9: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 5ms/step - loss: 0.0287 - mae: 0.0194 - accuracy: 1.0000 - Recall: 0.9872 - Precision: 0.9877 - Specificity: 1.0000 - AUC: 0.9995 - val_loss: 0.0193 - val_mae: 0.0144 - val_accuracy: 1.0000 - val_Recall: 0.9948 - val_Precision: 0.9927 - val_Specificity: 1.0000 - val_AUC: 0.9998
+    245/245 [==============================] - 4s 18ms/step - loss: 0.0299 - mae: 0.0181 - accuracy: 1.0000 - Recall: 0.9711 - Precision: 0.9768 - Specificity: 1.0000 - AUC: 0.9988 - val_loss: 0.0239 - val_mae: 0.0159 - val_accuracy: 1.0000 - val_Recall: 0.9559 - val_Precision: 0.9956 - val_Specificity: 1.0000 - val_AUC: 0.9998
     Epoch 10/20
-    243/245 [============================>.] - ETA: 0s - loss: 0.0311 - mae: 0.0198 - accuracy: 1.0000 - Recall: 0.9871 - Precision: 0.9858 - Specificity: 1.0000 - AUC: 0.9994
+    236/245 [===========================>..] - ETA: 0s - loss: 0.0217 - mae: 0.0152 - accuracy: 1.0000 - Recall: 0.9787 - Precision: 0.9830 - Specificity: 1.0000 - AUC: 0.9997
     Epoch 10: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0309 - mae: 0.0197 - accuracy: 1.0000 - Recall: 0.9872 - Precision: 0.9859 - Specificity: 1.0000 - AUC: 0.9994 - val_loss: 0.0213 - val_mae: 0.0150 - val_accuracy: 1.0000 - val_Recall: 0.9990 - val_Precision: 0.9846 - val_Specificity: 1.0000 - val_AUC: 0.9999
+    245/245 [==============================] - 2s 8ms/step - loss: 0.0223 - mae: 0.0156 - accuracy: 1.0000 - Recall: 0.9790 - Precision: 0.9816 - Specificity: 1.0000 - AUC: 0.9996 - val_loss: 0.0169 - val_mae: 0.0124 - val_accuracy: 1.0000 - val_Recall: 0.9727 - val_Precision: 0.9936 - val_Specificity: 1.0000 - val_AUC: 0.9999
     Epoch 11/20
-    243/245 [============================>.] - ETA: 0s - loss: 0.0321 - mae: 0.0192 - accuracy: 1.0000 - Recall: 0.9869 - Precision: 0.9850 - Specificity: 1.0000 - AUC: 0.9994
+    243/245 [============================>.] - ETA: 0s - loss: 0.0299 - mae: 0.0174 - accuracy: 1.0000 - Recall: 0.9709 - Precision: 0.9771 - Specificity: 1.0000 - AUC: 0.9986
     Epoch 11: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 5ms/step - loss: 0.0321 - mae: 0.0193 - accuracy: 1.0000 - Recall: 0.9867 - Precision: 0.9851 - Specificity: 1.0000 - AUC: 0.9994 - val_loss: 0.0191 - val_mae: 0.0141 - val_accuracy: 1.0000 - val_Recall: 0.9885 - val_Precision: 0.9947 - val_Specificity: 1.0000 - val_AUC: 0.9999
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0298 - mae: 0.0173 - accuracy: 1.0000 - Recall: 0.9711 - Precision: 0.9768 - Specificity: 1.0000 - AUC: 0.9986 - val_loss: 0.0195 - val_mae: 0.0135 - val_accuracy: 1.0000 - val_Recall: 0.9706 - val_Precision: 0.9914 - val_Specificity: 1.0000 - val_AUC: 0.9998
     Epoch 12/20
-    236/245 [===========================>..] - ETA: 0s - loss: 0.0387 - mae: 0.0213 - accuracy: 1.0000 - Recall: 0.9808 - Precision: 0.9840 - Specificity: 1.0000 - AUC: 0.9991
+    244/245 [============================>.] - ETA: 0s - loss: 0.0249 - mae: 0.0156 - accuracy: 1.0000 - Recall: 0.9768 - Precision: 0.9789 - Specificity: 1.0000 - AUC: 0.9995
     Epoch 12: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0386 - mae: 0.0214 - accuracy: 1.0000 - Recall: 0.9815 - Precision: 0.9833 - Specificity: 1.0000 - AUC: 0.9991 - val_loss: 0.0358 - val_mae: 0.0207 - val_accuracy: 1.0000 - val_Recall: 0.9592 - val_Precision: 1.0000 - val_Specificity: 1.0000 - val_AUC: 0.9999
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0248 - mae: 0.0156 - accuracy: 1.0000 - Recall: 0.9769 - Precision: 0.9790 - Specificity: 1.0000 - AUC: 0.9995 - val_loss: 0.0137 - val_mae: 0.0109 - val_accuracy: 1.0000 - val_Recall: 0.9874 - val_Precision: 0.9958 - val_Specificity: 1.0000 - val_AUC: 0.9999
     Epoch 13/20
-    235/245 [===========================>..] - ETA: 0s - loss: 0.0228 - mae: 0.0156 - accuracy: 1.0000 - Recall: 0.9905 - Precision: 0.9913 - Specificity: 1.0000 - AUC: 0.9997
+    240/245 [============================>.] - ETA: 0s - loss: 0.0266 - mae: 0.0158 - accuracy: 1.0000 - Recall: 0.9749 - Precision: 0.9790 - Specificity: 1.0000 - AUC: 0.9994
     Epoch 13: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0235 - mae: 0.0162 - accuracy: 1.0000 - Recall: 0.9903 - Precision: 0.9906 - Specificity: 1.0000 - AUC: 0.9997 - val_loss: 0.0722 - val_mae: 0.0298 - val_accuracy: 1.0000 - val_Recall: 0.9436 - val_Precision: 1.0000 - val_Specificity: 1.0000 - val_AUC: 0.9999
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0265 - mae: 0.0158 - accuracy: 1.0000 - Recall: 0.9753 - Precision: 0.9789 - Specificity: 1.0000 - AUC: 0.9994 - val_loss: 0.0164 - val_mae: 0.0118 - val_accuracy: 1.0000 - val_Recall: 0.9685 - val_Precision: 1.0000 - val_Specificity: 1.0000 - val_AUC: 0.9999
     Epoch 14/20
-    240/245 [============================>.] - ETA: 0s - loss: 0.0294 - mae: 0.0175 - accuracy: 1.0000 - Recall: 0.9870 - Precision: 0.9885 - Specificity: 1.0000 - AUC: 0.9994
+    241/245 [============================>.] - ETA: 0s - loss: 0.0259 - mae: 0.0155 - accuracy: 1.0000 - Recall: 0.9765 - Precision: 0.9765 - Specificity: 1.0000 - AUC: 0.9995
     Epoch 14: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0293 - mae: 0.0176 - accuracy: 1.0000 - Recall: 0.9872 - Precision: 0.9885 - Specificity: 1.0000 - AUC: 0.9994 - val_loss: 0.0161 - val_mae: 0.0122 - val_accuracy: 1.0000 - val_Recall: 1.0000 - val_Precision: 0.9927 - val_Specificity: 1.0000 - val_AUC: 0.9999
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0262 - mae: 0.0156 - accuracy: 1.0000 - Recall: 0.9753 - Precision: 0.9769 - Specificity: 1.0000 - AUC: 0.9994 - val_loss: 0.0192 - val_mae: 0.0127 - val_accuracy: 1.0000 - val_Recall: 0.9643 - val_Precision: 0.9978 - val_Specificity: 1.0000 - val_AUC: 0.9999
     Epoch 15/20
-    240/245 [============================>.] - ETA: 0s - loss: 0.0220 - mae: 0.0149 - accuracy: 1.0000 - Recall: 0.9888 - Precision: 0.9893 - Specificity: 1.0000 - AUC: 0.9997
+    240/245 [============================>.] - ETA: 0s - loss: 0.0195 - mae: 0.0128 - accuracy: 1.0000 - Recall: 0.9840 - Precision: 0.9866 - Specificity: 1.0000 - AUC: 0.9997
     Epoch 15: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0225 - mae: 0.0151 - accuracy: 1.0000 - Recall: 0.9880 - Precision: 0.9895 - Specificity: 1.0000 - AUC: 0.9997 - val_loss: 0.0196 - val_mae: 0.0125 - val_accuracy: 1.0000 - val_Recall: 0.9990 - val_Precision: 0.9835 - val_Specificity: 1.0000 - val_AUC: 0.9999
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0197 - mae: 0.0129 - accuracy: 1.0000 - Recall: 0.9843 - Precision: 0.9863 - Specificity: 1.0000 - AUC: 0.9997 - val_loss: 0.0159 - val_mae: 0.0114 - val_accuracy: 1.0000 - val_Recall: 0.9790 - val_Precision: 0.9873 - val_Specificity: 1.0000 - val_AUC: 0.9998
     Epoch 16/20
-    239/245 [============================>.] - ETA: 0s - loss: 0.0217 - mae: 0.0144 - accuracy: 1.0000 - Recall: 0.9901 - Precision: 0.9896 - Specificity: 1.0000 - AUC: 0.9997
+    240/245 [============================>.] - ETA: 0s - loss: 0.0274 - mae: 0.0155 - accuracy: 1.0000 - Recall: 0.9770 - Precision: 0.9749 - Specificity: 0.9998 - AUC: 0.9993
     Epoch 16: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0222 - mae: 0.0147 - accuracy: 1.0000 - Recall: 0.9901 - Precision: 0.9888 - Specificity: 1.0000 - AUC: 0.9997 - val_loss: 0.0408 - val_mae: 0.0198 - val_accuracy: 1.0000 - val_Recall: 0.9624 - val_Precision: 1.0000 - val_Specificity: 1.0000 - val_AUC: 0.9999
+    245/245 [==============================] - 1s 6ms/step - loss: 0.0270 - mae: 0.0153 - accuracy: 1.0000 - Recall: 0.9774 - Precision: 0.9754 - Specificity: 0.9998 - AUC: 0.9993 - val_loss: 0.0147 - val_mae: 0.0110 - val_accuracy: 1.0000 - val_Recall: 0.9958 - val_Precision: 0.9854 - val_Specificity: 1.0000 - val_AUC: 0.9999
     Epoch 17/20
-    238/245 [============================>.] - ETA: 0s - loss: 0.0285 - mae: 0.0158 - accuracy: 1.0000 - Recall: 0.9879 - Precision: 0.9895 - Specificity: 0.9997 - AUC: 0.9993
+    245/245 [==============================] - ETA: 0s - loss: 0.0260 - mae: 0.0146 - accuracy: 1.0000 - Recall: 0.9790 - Precision: 0.9790 - Specificity: 1.0000 - AUC: 0.9992
     Epoch 17: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 1s 4ms/step - loss: 0.0283 - mae: 0.0157 - accuracy: 1.0000 - Recall: 0.9883 - Precision: 0.9893 - Specificity: 0.9998 - AUC: 0.9993 - val_loss: 0.0205 - val_mae: 0.0135 - val_accuracy: 1.0000 - val_Recall: 0.9979 - val_Precision: 0.9856 - val_Specificity: 1.0000 - val_AUC: 0.9998
+    245/245 [==============================] - 2s 8ms/step - loss: 0.0260 - mae: 0.0146 - accuracy: 1.0000 - Recall: 0.9790 - Precision: 0.9790 - Specificity: 1.0000 - AUC: 0.9992 - val_loss: 0.0721 - val_mae: 0.0319 - val_accuracy: 1.0000 - val_Recall: 1.0000 - val_Precision: 0.8815 - val_Specificity: 1.0000 - val_AUC: 0.9998
+    62/62 [==============================] - 0s 3ms/step
+    
+
+
+    
+![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_52_15.png)
+    
+
+
+    Accuracy: 0.9851965288412455
+    Precision: 1.0
+    Recall: 0.9390756302521008
+    F1-score: 0.9685807150595883
+    ROC AUC: 0.9695378151260504
+    MSE: 0.014803471158754467
+    RMSE: 0.12166951614416187
+    Epoch 1/20
+    235/245 [===========================>..] - ETA: 0s - loss: 0.2293 - mae: 0.1639 - accuracy: 1.0000 - Recall: 0.6643 - Precision: 0.9328 - Specificity: 0.9991 - AUC: 0.9559
+    Epoch 1: val_accuracy improved from -inf to 1.00000, saving model to best_model.h5
+    245/245 [==============================] - 3s 7ms/step - loss: 0.2235 - mae: 0.1597 - accuracy: 1.0000 - Recall: 0.6777 - Precision: 0.9335 - Specificity: 0.9993 - AUC: 0.9583 - val_loss: 0.0602 - val_mae: 0.0488 - val_accuracy: 1.0000 - val_Recall: 0.9853 - val_Precision: 0.9475 - val_Specificity: 1.0000 - val_AUC: 0.9992
+    Epoch 2/20
+     21/245 [=>............................] - ETA: 1s - loss: 0.0695 - mae: 0.0543 - accuracy: 1.0000 - Recall: 0.9494 - Precision: 0.9615 - Specificity: 1.0000 - AUC: 0.9979
+
+    /usr/local/lib/python3.10/dist-packages/keras/src/engine/training.py:3079: UserWarning: You are saving your model as an HDF5 file via `model.save()`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')`.
+      saving_api.save_model(
+    
+
+    238/245 [============================>.] - ETA: 0s - loss: 0.0600 - mae: 0.0432 - accuracy: 1.0000 - Recall: 0.9453 - Precision: 0.9588 - Specificity: 1.0000 - AUC: 0.9975
+    Epoch 2: val_accuracy did not improve from 1.00000
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0593 - mae: 0.0428 - accuracy: 1.0000 - Recall: 0.9470 - Precision: 0.9591 - Specificity: 1.0000 - AUC: 0.9976 - val_loss: 0.0475 - val_mae: 0.0338 - val_accuracy: 1.0000 - val_Recall: 0.9097 - val_Precision: 1.0000 - val_Specificity: 1.0000 - val_AUC: 0.9998
+    Epoch 3/20
+    238/245 [============================>.] - ETA: 0s - loss: 0.0427 - mae: 0.0306 - accuracy: 1.0000 - Recall: 0.9627 - Precision: 0.9685 - Specificity: 1.0000 - AUC: 0.9987
+    Epoch 3: val_accuracy did not improve from 1.00000
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0425 - mae: 0.0304 - accuracy: 1.0000 - Recall: 0.9622 - Precision: 0.9693 - Specificity: 1.0000 - AUC: 0.9987 - val_loss: 0.0429 - val_mae: 0.0300 - val_accuracy: 1.0000 - val_Recall: 0.9979 - val_Precision: 0.9295 - val_Specificity: 1.0000 - val_AUC: 0.9995
+    Epoch 4/20
+    239/245 [============================>.] - ETA: 0s - loss: 0.0475 - mae: 0.0293 - accuracy: 1.0000 - Recall: 0.9557 - Precision: 0.9594 - Specificity: 1.0000 - AUC: 0.9981
+    Epoch 4: val_accuracy did not improve from 1.00000
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0485 - mae: 0.0298 - accuracy: 1.0000 - Recall: 0.9538 - Precision: 0.9588 - Specificity: 1.0000 - AUC: 0.9980 - val_loss: 0.0766 - val_mae: 0.0421 - val_accuracy: 1.0000 - val_Recall: 1.0000 - val_Precision: 0.8623 - val_Specificity: 1.0000 - val_AUC: 0.9998
+    Epoch 5/20
+    244/245 [============================>.] - ETA: 0s - loss: 0.0364 - mae: 0.0247 - accuracy: 1.0000 - Recall: 0.9684 - Precision: 0.9715 - Specificity: 1.0000 - AUC: 0.9990
+    Epoch 5: val_accuracy did not improve from 1.00000
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0363 - mae: 0.0247 - accuracy: 1.0000 - Recall: 0.9685 - Precision: 0.9716 - Specificity: 1.0000 - AUC: 0.9990 - val_loss: 0.0206 - val_mae: 0.0172 - val_accuracy: 1.0000 - val_Recall: 0.9937 - val_Precision: 0.9916 - val_Specificity: 1.0000 - val_AUC: 0.9999
+    Epoch 6/20
+    238/245 [============================>.] - ETA: 0s - loss: 0.0316 - mae: 0.0213 - accuracy: 1.0000 - Recall: 0.9747 - Precision: 0.9736 - Specificity: 1.0000 - AUC: 0.9992
+    Epoch 6: val_accuracy did not improve from 1.00000
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0313 - mae: 0.0211 - accuracy: 1.0000 - Recall: 0.9748 - Precision: 0.9743 - Specificity: 1.0000 - AUC: 0.9992 - val_loss: 0.0312 - val_mae: 0.0204 - val_accuracy: 1.0000 - val_Recall: 0.9328 - val_Precision: 1.0000 - val_Specificity: 1.0000 - val_AUC: 0.9999
+    Epoch 7/20
+    241/245 [============================>.] - ETA: 0s - loss: 0.0322 - mae: 0.0204 - accuracy: 1.0000 - Recall: 0.9668 - Precision: 0.9741 - Specificity: 1.0000 - AUC: 0.9989
+    Epoch 7: val_accuracy did not improve from 1.00000
+    245/245 [==============================] - 2s 8ms/step - loss: 0.0322 - mae: 0.0204 - accuracy: 1.0000 - Recall: 0.9669 - Precision: 0.9746 - Specificity: 1.0000 - AUC: 0.9989 - val_loss: 0.0238 - val_mae: 0.0180 - val_accuracy: 1.0000 - val_Recall: 0.9979 - val_Precision: 0.9615 - val_Specificity: 1.0000 - val_AUC: 0.9999
+    Epoch 8/20
+    240/245 [============================>.] - ETA: 0s - loss: 0.0335 - mae: 0.0212 - accuracy: 1.0000 - Recall: 0.9638 - Precision: 0.9684 - Specificity: 1.0000 - AUC: 0.9990
+    Epoch 8: val_accuracy did not improve from 1.00000
+    245/245 [==============================] - 2s 8ms/step - loss: 0.0336 - mae: 0.0211 - accuracy: 1.0000 - Recall: 0.9633 - Precision: 0.9688 - Specificity: 1.0000 - AUC: 0.9990 - val_loss: 0.0301 - val_mae: 0.0178 - val_accuracy: 1.0000 - val_Recall: 0.9433 - val_Precision: 1.0000 - val_Specificity: 1.0000 - val_AUC: 0.9998
+    Epoch 9/20
+    245/245 [==============================] - ETA: 0s - loss: 0.0282 - mae: 0.0181 - accuracy: 1.0000 - Recall: 0.9727 - Precision: 0.9778 - Specificity: 1.0000 - AUC: 0.9994
+    Epoch 9: val_accuracy did not improve from 1.00000
+    245/245 [==============================] - 2s 6ms/step - loss: 0.0282 - mae: 0.0181 - accuracy: 1.0000 - Recall: 0.9727 - Precision: 0.9778 - Specificity: 1.0000 - AUC: 0.9994 - val_loss: 0.0174 - val_mae: 0.0138 - val_accuracy: 1.0000 - val_Recall: 0.9979 - val_Precision: 0.9754 - val_Specificity: 1.0000 - val_AUC: 0.9999
+    Epoch 10/20
+    245/245 [==============================] - ETA: 0s - loss: 0.0303 - mae: 0.0187 - accuracy: 1.0000 - Recall: 0.9732 - Precision: 0.9727 - Specificity: 1.0000 - AUC: 0.9992
+    Epoch 10: val_accuracy did not improve from 1.00000
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0303 - mae: 0.0187 - accuracy: 1.0000 - Recall: 0.9732 - Precision: 0.9727 - Specificity: 1.0000 - AUC: 0.9992 - val_loss: 0.0180 - val_mae: 0.0134 - val_accuracy: 1.0000 - val_Recall: 0.9706 - val_Precision: 1.0000 - val_Specificity: 1.0000 - val_AUC: 0.9999
+    Epoch 11/20
+    239/245 [============================>.] - ETA: 0s - loss: 0.0205 - mae: 0.0148 - accuracy: 1.0000 - Recall: 0.9811 - Precision: 0.9843 - Specificity: 1.0000 - AUC: 0.9997
+    Epoch 11: val_accuracy did not improve from 1.00000
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0204 - mae: 0.0148 - accuracy: 1.0000 - Recall: 0.9811 - Precision: 0.9842 - Specificity: 1.0000 - AUC: 0.9997 - val_loss: 0.0189 - val_mae: 0.0139 - val_accuracy: 1.0000 - val_Recall: 1.0000 - val_Precision: 0.9675 - val_Specificity: 1.0000 - val_AUC: 0.9999
+    Epoch 12/20
+    237/245 [============================>.] - ETA: 0s - loss: 0.0293 - mae: 0.0172 - accuracy: 1.0000 - Recall: 0.9695 - Precision: 0.9759 - Specificity: 1.0000 - AUC: 0.9990
+    Epoch 12: val_accuracy did not improve from 1.00000
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0290 - mae: 0.0172 - accuracy: 1.0000 - Recall: 0.9696 - Precision: 0.9767 - Specificity: 1.0000 - AUC: 0.9991 - val_loss: 0.0321 - val_mae: 0.0169 - val_accuracy: 1.0000 - val_Recall: 0.9412 - val_Precision: 1.0000 - val_Specificity: 1.0000 - val_AUC: 0.9999
+    Epoch 13/20
+    236/245 [===========================>..] - ETA: 0s - loss: 0.0299 - mae: 0.0170 - accuracy: 1.0000 - Recall: 0.9715 - Precision: 0.9758 - Specificity: 1.0000 - AUC: 0.9993
+    Epoch 13: val_accuracy did not improve from 1.00000
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0293 - mae: 0.0168 - accuracy: 1.0000 - Recall: 0.9727 - Precision: 0.9763 - Specificity: 1.0000 - AUC: 0.9993 - val_loss: 0.0133 - val_mae: 0.0104 - val_accuracy: 1.0000 - val_Recall: 0.9853 - val_Precision: 1.0000 - val_Specificity: 1.0000 - val_AUC: 0.9999
+    Epoch 14/20
+    244/245 [============================>.] - ETA: 0s - loss: 0.0227 - mae: 0.0145 - accuracy: 1.0000 - Recall: 0.9811 - Precision: 0.9811 - Specificity: 1.0000 - AUC: 0.9993
+    Epoch 14: val_accuracy did not improve from 1.00000
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0226 - mae: 0.0145 - accuracy: 1.0000 - Recall: 0.9811 - Precision: 0.9811 - Specificity: 1.0000 - AUC: 0.9993 - val_loss: 0.0123 - val_mae: 0.0099 - val_accuracy: 1.0000 - val_Recall: 0.9916 - val_Precision: 0.9958 - val_Specificity: 1.0000 - val_AUC: 1.0000
+    Epoch 15/20
+    242/245 [============================>.] - ETA: 0s - loss: 0.0274 - mae: 0.0165 - accuracy: 1.0000 - Recall: 0.9719 - Precision: 0.9781 - Specificity: 1.0000 - AUC: 0.9994
+    Epoch 15: val_accuracy did not improve from 1.00000
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0272 - mae: 0.0165 - accuracy: 1.0000 - Recall: 0.9722 - Precision: 0.9783 - Specificity: 1.0000 - AUC: 0.9994 - val_loss: 0.0243 - val_mae: 0.0159 - val_accuracy: 1.0000 - val_Recall: 1.0000 - val_Precision: 0.9558 - val_Specificity: 1.0000 - val_AUC: 1.0000
+    Epoch 16/20
+    235/245 [===========================>..] - ETA: 0s - loss: 0.0243 - mae: 0.0143 - accuracy: 1.0000 - Recall: 0.9826 - Precision: 0.9810 - Specificity: 1.0000 - AUC: 0.9995
+    Epoch 16: val_accuracy did not improve from 1.00000
+    245/245 [==============================] - 1s 5ms/step - loss: 0.0239 - mae: 0.0142 - accuracy: 1.0000 - Recall: 0.9822 - Precision: 0.9816 - Specificity: 1.0000 - AUC: 0.9995 - val_loss: 0.0308 - val_mae: 0.0186 - val_accuracy: 1.0000 - val_Recall: 0.9979 - val_Precision: 0.9387 - val_Specificity: 1.0000 - val_AUC: 0.9999
+    Epoch 17/20
+    243/245 [============================>.] - ETA: 0s - loss: 0.0282 - mae: 0.0165 - accuracy: 1.0000 - Recall: 0.9761 - Precision: 0.9730 - Specificity: 1.0000 - AUC: 0.9991
+    Epoch 17: val_accuracy did not improve from 1.00000
+    245/245 [==============================] - 2s 8ms/step - loss: 0.0283 - mae: 0.0166 - accuracy: 1.0000 - Recall: 0.9759 - Precision: 0.9733 - Specificity: 1.0000 - AUC: 0.9991 - val_loss: 0.0234 - val_mae: 0.0136 - val_accuracy: 1.0000 - val_Recall: 0.9601 - val_Precision: 1.0000 - val_Specificity: 1.0000 - val_AUC: 0.9998
     Epoch 18/20
-    238/245 [============================>.] - ETA: 0s - loss: 0.0200 - mae: 0.0133 - accuracy: 1.0000 - Recall: 0.9906 - Precision: 0.9914 - Specificity: 0.9997 - AUC: 0.9996
+    244/245 [============================>.] - ETA: 0s - loss: 0.0258 - mae: 0.0157 - accuracy: 1.0000 - Recall: 0.9794 - Precision: 0.9753 - Specificity: 1.0000 - AUC: 0.9995
     Epoch 18: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 2s 7ms/step - loss: 0.0199 - mae: 0.0133 - accuracy: 1.0000 - Recall: 0.9906 - Precision: 0.9916 - Specificity: 0.9998 - AUC: 0.9997 - val_loss: 0.0170 - val_mae: 0.0118 - val_accuracy: 1.0000 - val_Recall: 0.9885 - val_Precision: 0.9979 - val_Specificity: 1.0000 - val_AUC: 0.9999
+    245/245 [==============================] - 2s 8ms/step - loss: 0.0258 - mae: 0.0157 - accuracy: 1.0000 - Recall: 0.9795 - Precision: 0.9749 - Specificity: 1.0000 - AUC: 0.9995 - val_loss: 0.0124 - val_mae: 0.0102 - val_accuracy: 1.0000 - val_Recall: 0.9937 - val_Precision: 0.9958 - val_Specificity: 1.0000 - val_AUC: 1.0000
     Epoch 19/20
-    242/245 [============================>.] - ETA: 0s - loss: 0.0229 - mae: 0.0140 - accuracy: 1.0000 - Recall: 0.9894 - Precision: 0.9897 - Specificity: 1.0000 - AUC: 0.9997
+    236/245 [===========================>..] - ETA: 0s - loss: 0.0214 - mae: 0.0137 - accuracy: 1.0000 - Recall: 0.9804 - Precision: 0.9798 - Specificity: 1.0000 - AUC: 0.9996
     Epoch 19: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 2s 8ms/step - loss: 0.0229 - mae: 0.0140 - accuracy: 1.0000 - Recall: 0.9893 - Precision: 0.9898 - Specificity: 1.0000 - AUC: 0.9997 - val_loss: 0.0151 - val_mae: 0.0107 - val_accuracy: 1.0000 - val_Recall: 0.9927 - val_Precision: 0.9979 - val_Specificity: 1.0000 - val_AUC: 0.9999
-    Epoch 20/20
-    240/245 [============================>.] - ETA: 0s - loss: 0.0215 - mae: 0.0128 - accuracy: 1.0000 - Recall: 0.9909 - Precision: 0.9912 - Specificity: 1.0000 - AUC: 0.9997
-    Epoch 20: val_accuracy did not improve from 1.00000
-    245/245 [==============================] - 2s 7ms/step - loss: 0.0214 - mae: 0.0128 - accuracy: 1.0000 - Recall: 0.9911 - Precision: 0.9909 - Specificity: 1.0000 - AUC: 0.9997 - val_loss: 0.0144 - val_mae: 0.0102 - val_accuracy: 1.0000 - val_Recall: 0.9979 - val_Precision: 0.9927 - val_Specificity: 1.0000 - val_AUC: 0.9999
+    245/245 [==============================] - 2s 8ms/step - loss: 0.0215 - mae: 0.0137 - accuracy: 1.0000 - Recall: 0.9806 - Precision: 0.9801 - Specificity: 1.0000 - AUC: 0.9996 - val_loss: 0.0261 - val_mae: 0.0165 - val_accuracy: 1.0000 - val_Recall: 0.9979 - val_Precision: 0.9481 - val_Specificity: 1.0000 - val_AUC: 0.9999
     62/62 [==============================] - 0s 2ms/step
     
 
 
     
-![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_51_19.png)
+![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_52_19.png)
     
 
 
-    Accuracy: 0.9897907095456866
+    Accuracy: 0.9846860643185299
     Precision: 1.0
-    Recall: 0.9791013584117032
-    F1-score: 0.9894403379091868
-    ROC AUC: 0.9895506792058516
+    Recall: 0.9369747899159664
+    F1-score: 0.9674620390455532
+    ROC AUC: 0.9684873949579832
+    MSE: 0.015313935681470138
+    RMSE: 0.12374948760083873
     
 
 
@@ -2170,9 +2198,11 @@ calcule_metrics_classification(y_test, y_pred_binary)
     
     Accuracy: 0.9412304866850322
     Precision: 1.0
-    Recall: 0.8783269961977186
-    F1-score: 0.9352226720647774
-    ROC AUC: 0.9391634980988592
+    Recall: 0.7706093189964157
+    F1-score: 0.8704453441295545
+    ROC AUC: 0.8853046594982079
+    MSE: 0.05876951331496786
+    RMSE: 0.24242424242424243
     
 
 
@@ -2182,7 +2212,7 @@ generate_matriz_confusion(y_test, y_pred_binary)
 
 
     
-![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_55_0.png)
+![png](Trabalho_Machine_Learning_files/Trabalho_Machine_Learning_56_0.png)
     
 
 
